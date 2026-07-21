@@ -43,7 +43,9 @@ C:\mybizz\
 
 ## 2. Development Hub — `C:\dev\`
 
-Where projects are developed. Active projects have the `dev-` prefix. Folders without `dev-` prefix are support folders.
+Where projects are developed. Active projects have the `dev-` prefix. Folders without `dev-`
+prefix are support folders, including `dev-root/` which holds division-level inventory and
+mapping documents.
 
 ```
 C:\dev\
@@ -64,7 +66,9 @@ C:\dev\
 │   ├── wip/                    ← Project WIP (contains todo.md)
 │   └── (many subfolders — see dev-pdlf/docs-local/docmap.md)
 ├── docmap.md                   ← THIS FILE — full division hierarchy map
-├── project-inventory.md        ← Project registry (paths, repos, GBrain, GStack)
+├── dev-root/                    ← Division-level inventory and mapping docs
+│   ├── docmap.md                ← Full division hierarchy map
+│   └── project-inventory.md     ← Project registry (paths, repos, GBrain, GStack)
 ├── obsolete/                   ← Dev-level obsolete. Developer purges only.
 ├── project-library-global/     ← Shared standards and reference for all projects
 │   ├── adr-global/             ← Global architectural decision records
@@ -179,8 +183,8 @@ Every active project has `C:\dev\dev-{project}\wip\todo.md`. The todo.md is proj
 
 | Document | Location | Purpose |
 |---|---|---|---|
-| `docmap.md` | `C:\dev\docmap.md` | THIS FILE — full division hierarchy map |
-| `project-inventory.md` | `C:\dev\project-inventory.md` | Project registry (paths, repos, GBrain, GStack) |
+| `docmap.md` | `C:\dev\dev-root\docmap.md` | THIS FILE — full division hierarchy map |
+| `project-inventory.md` | `C:\dev\dev-root\project-inventory.md` | Project registry (paths, repos, GBrain, GStack) |
 | `scaffold-system.html` | `C:\mybizz\Desktop\pc-mapping\scaffold-system.html` | Visual hierarchy diagram of the division |
 | `README.md` | `C:\mybizz\README.md` | Division workspace overview |
 | Global AGENTS.md | `~/.config/opencode/AGENTS.md` | Global agent behavior rules |
