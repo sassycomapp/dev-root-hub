@@ -191,3 +191,7 @@ Every active project has `C:\dev\dev-{project}\wip\todo.md`. The todo.md is proj
 | Project AGENTS.md | `C:\dev\dev-{project}\AGENTS.md` | Per-project agent rules |
 | daily-ops.md | `C:\projects-reference\workspace-reference\workflow reference\daily-ops.md` | Daily operations quick reference |
 | dev-pdlf docmap | `C:\dev\dev-pdlf\docs-local\docmap.md` | PDLF project document map |
+| docs-manager skill | `~/.config/opencode/skills/docs-manager/SKILL.md` | Skill definition — document inventory, update rules, workflow |
+| | Windows: `\\wsl.localhost\Ubuntu\home\dev-p\.config\opencode\skills\docs-manager\SKILL.md` | |
+| docs-manager agent | `~/.config/opencode/agents/docs-manager.md` | Sub-agent — Phase 1 scan prompts, read-only |
+| | Windows: `\\wsl.localhost\Ubuntu\home\dev-p\.config\opencode\agents\docs-manager.md` | |
