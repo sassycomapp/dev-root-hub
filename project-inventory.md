@@ -57,6 +57,12 @@ updated: 2026-07-20
 - GBrain: `project-library-global`
 - Note: Shared standards library for all projects.
 
+### dev-root-hub
+- Local path: `/mnt/c/dev/dev-root`
+- GitHub: `https://github.com/sassycomapp/dev-root-hub`
+- GBrain: `dev-root-hub`
+- Note: Division-level inventory and mapping documents (docmap.md, project-inventory.md).
+
 ---
 
 ## Companion document
