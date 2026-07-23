@@ -13,20 +13,7 @@
 
 ```
 C:\mybizz\
-├── archive/                    ← Long-term reference store (not backup, not WIP)
-│   ├── Anvil_Methods/          ← Original Anvil specifications
-│   ├── Model Assessments/      ← Historical model confidence reports
-│   ├── artifact-saving-issue/  ← Resolved GStack investigation (11 files + resolution report)
-│   ├── ci-based-checks-format/ ← Archived check specs
-│   ├── local-testing-example/  ← Archived testing example
-│   ├── mybizz-core-methods/    ← Archived ADRs + methods
-│   └── prompts-example/        ← Archived prompt examples
-├── backup-mybizz/              ← BACKUP ONLY. Agents may read (with caution) but never edit or delete.
-├── Desktop/                    ← Active working desktop environment
-│   ├── Notebooks/              ← OneNote notebooks
-│   ├── Notebooks-look for good/ ← Additional notebooks
-│   ├── pc-mapping/             ← PC hierarchy diagrams (HTML)
-│   └── wip/                    ← Personal daily scratchpad (contains todo.txt)
+
 ├── gbrain/                     ← Installed tool (not user-managed)
 ├── gstack/                     ← Installed tool (not user-managed)
 ├── logs/                       ← System and tool logs
@@ -34,10 +21,11 @@ C:\mybizz\
 │   │   └── Learnings/          ← docs-manager institutional memory, one file per learning
 │   ├── github-logs/            ← Commit/push reports and closing git-status snapshots
 │   └── gbrain-logs/            ← GBrain sync per-source logs
+│   ├── matt-skills-teach/       ← Installed tool (not user-managed)
+│   └── WIP/                     ← Work in progress
 ├── Mgt/                        ← Business documents ONLY (financial, planning, management)
 │   ├── Davids Management .xlsx
 │   ├── namecheap-order-196053207.pdf
-│   └── obsolete/               ← Mgt-level obsolete items. Developer purges only.
 ├── scripts/                    ← Global utility scripts for this PC
 └── skills/                     ← Installed tool (not user-managed)
 ```
@@ -67,12 +55,11 @@ C:\dev\
 ├── dev-pdlf/                   ← ACTIVE PROJECT (PDLF — docs-only, no separate code repo)
 │   ├── pdlf/                   ← Output staging for deployment
 │   ├── wip/                    ← Project WIP (contains todo.md)
-│   └── (many subfolders — see dev-pdlf/docs-local/docmap.md)
+│   ├── (many subfolders — see dev-pdlf/docs-local/docmap.md)
 ├── dev-root/                    ← Division-level inventory and mapping docs
 │   ├── docmap.md                ← Full division hierarchy map
 │   └── project-inventory.md     ← Project registry (paths, repos, GBrain, GStack)
 ├── obsolete/                   ← Dev-level obsolete. Developer purges only.
-├── starting-prompt.txt          ← Session-template file for agent tasks
 ├── project-library-global/     ← Shared standards and reference for all projects
 │   ├── adr-global/             ← Global architectural decision records
 │   ├── checklists-global/      ← Global checklists
@@ -120,9 +107,16 @@ created afterward and it is now tracked normally again as an Active Repository �
 
 ```
 C:\projects-reference\
+├── .gbrain-source
+├── .gitignore
+├── _capability_check_19890.md
+├── COMPLIANCE-SYSTEM.md
+├── opencode.json
+├── WIP/
 ├── custom-skills-store/        ← Custom skills (built or planned)
 ├── deployed-projects/          ← Completed project storage (currently empty)
 └── workspace-reference/        ← How-to references for tools, apps, custom methods
+    ├── WIP/                     ← workspace-reference-todo.md
     ├── Anvil-reference/
     ├── cloudflare-reference/
     ├── gbrain-reference/
@@ -201,15 +195,14 @@ Every active project has `C:\dev\dev-{project}\wip\todo.md`. The todo.md is proj
 |---|---|---|
 | `docmap.md` | `C:\dev\dev-root\docmap.md` | THIS FILE — full division hierarchy map |
 | `project-inventory.md` | `C:\dev\dev-root\project-inventory.md` | Project registry (paths, repos, GBrain, GStack) — single source of truth for repo/remote tracking |
-| `README.md` | `C:\mybizz\README.md` | Division workspace overview |
 | Global AGENTS.md | `~/.config/opencode/AGENTS.md` | Global agent behavior rules |
 | Project AGENTS.md | `C:\dev\dev-{project}\AGENTS.md` | Per-project agent rules |
 | daily-ops.md | `C:\projects-reference\workspace-reference\workflow reference\daily-ops.md` | Daily operations quick reference |
 | dev-pdlf docmap | `C:\dev\dev-pdlf\docs-local\docmap.md` | PDLF project document map |
 | docs-manager skill | `~/.config/opencode/skills/docs-manager/SKILL.md` | Skill definition — document inventory, update rules, workflow |
 | | Windows: `\\wsl.localhost\Ubuntu\home\dev-p\.config\opencode\skills\docs-manager\SKILL.md` | |
-| docs-manager sub-agents (4 files) | `~/.config/opencode/agents/docs-manager-backup.md`, `docs-manager-scan.md`, `docs-manager-apply.md`, `docs-manager-commit.md` | One sub-agent per phase (0 backup, 1 scan, 4 apply, 6 commit/push), each with only the permissions its phase needs |
-| | Windows: `\\wsl.localhost\Ubuntu\home\dev-p\.config\opencode\agents\` | |
+| docs-manager sub-agents (4 files) | `~/.config/opencode/skills/docs-manager/docs-manager-backup.md`, `docs-manager-scan.md`, `docs-manager-apply.md`, `docs-manager-commit.md` | One sub-agent per phase (0 backup, 1 scan, 4 apply, 6 commit/push), each with only the permissions its phase needs |
+| | Windows: `\\wsl.localhost\Ubuntu\home\dev-p\.config\opencode\skills\docs-manager\` | |
 
 **Retired:** `scaffold-system.html` is no longer a managed companion document — it was a
 one-time HTML visual aid, now archived to `C:\mybizz\archive\` as a historical record rather
