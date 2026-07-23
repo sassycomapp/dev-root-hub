@@ -21,13 +21,13 @@ C:\mybizz\
 │   │   └── Learnings/          ← docs-manager institutional memory, one file per learning
 │   ├── github-logs/            ← Commit/push reports and closing git-status snapshots
 │   └── gbrain-logs/            ← GBrain sync per-source logs
-│   ├── matt-skills-teach/       ← Installed tool (not user-managed)
-│   └── WIP/                     ← Work in progress
+├── matt-skills-teach/          ← Installed tool (not user-managed)
 ├── Mgt/                        ← Business documents ONLY (financial, planning, management)
 │   ├── Davids Management .xlsx
-│   ├── namecheap-order-196053207.pdf
+│   └── namecheap-order-196053207.pdf
 ├── scripts/                    ← Global utility scripts for this PC
-└── skills/                     ← Installed tool (not user-managed)
+├── skills/                     ← Installed tool (not user-managed)
+└── WIP/                        ← Work in progress
 ```
 
 ---
