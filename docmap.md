@@ -2,7 +2,8 @@
 
 **Purpose:** Single canonical navigation map for the Mybizz division — where every folder lives, what it is for, and where new files should go. Agents read this to understand the territory.
 
-**Date:** 2026-07-20
+**Date:** 2026-07-23
+**Verified:** 2026-07-23
 
 **Companion:** `project-inventory.md` (same folder) — project-level paths, GitHub repos, GBrain sources, GStack artifact paths.
 
@@ -30,6 +31,8 @@ C:\mybizz\
 ├── gstack/                     ← Installed tool (not user-managed)
 ├── logs/                       ← System and tool logs
 │   ├── docs-manager/           ← docs-manager skill run logs
+│   │   └── Learnings/          ← docs-manager institutional memory, one file per learning
+│   ├── github-logs/            ← Commit/push reports and closing git-status snapshots
 │   └── gbrain-logs/            ← GBrain sync per-source logs
 ├── Mgt/                        ← Business documents ONLY (financial, planning, management)
 │   ├── Davids Management .xlsx
@@ -100,7 +103,11 @@ C:\pdlf\
 
 ## 4. Reference Library — `C:\projects-reference\`
 
-Reference documents, custom skills, and completed projects. NOT a git repo (`.git` removed 2026-07-20).
+Reference documents, custom skills, and completed projects. **Active git repo** —
+`https://github.com/sassycomapp/projects-reference` (branch `main`). Note: `.git` was removed
+on 2026-07-20 and this location was briefly out of scope for docs-manager; a new GitHub repo was
+created afterward and it is now tracked normally again as an Active Repository — see
+`project-inventory.md`.
 
 ```
 C:\projects-reference\
@@ -151,7 +158,7 @@ C:\projects-reference\
 | Reference docs (how-to, tool docs) | `C:\projects-reference\workspace-reference\` |
 | Completed projects | `C:\projects-reference\deployed-projects\` |
 | Backups | `C:\mybizz\backup-mybizz\` (new folder per backup exercise) |
-| System and tool logs | `C:\mybizz\logs\{tool}\` (e.g., `C:\mybizz\logs\gbrain-logs\`) |
+| System and tool logs | `C:\mybizz\logs\{tool}\` (e.g., `C:\mybizz\logs\gbrain-logs\`, `C:\mybizz\logs\github-logs\`) |
 
 ### archive vs obsolete
 
@@ -182,10 +189,9 @@ Every active project has `C:\dev\dev-{project}\wip\todo.md`. The todo.md is proj
 ## 8. Key Companion Documents
 
 | Document | Location | Purpose |
-|---|---|---|---|
+|---|---|---|
 | `docmap.md` | `C:\dev\dev-root\docmap.md` | THIS FILE — full division hierarchy map |
-| `project-inventory.md` | `C:\dev\dev-root\project-inventory.md` | Project registry (paths, repos, GBrain, GStack) |
-| `scaffold-system.html` | `C:\mybizz\Desktop\pc-mapping\scaffold-system.html` | Visual hierarchy diagram of the division |
+| `project-inventory.md` | `C:\dev\dev-root\project-inventory.md` | Project registry (paths, repos, GBrain, GStack) — single source of truth for repo/remote tracking |
 | `README.md` | `C:\mybizz\README.md` | Division workspace overview |
 | Global AGENTS.md | `~/.config/opencode/AGENTS.md` | Global agent behavior rules |
 | Project AGENTS.md | `C:\dev\dev-{project}\AGENTS.md` | Per-project agent rules |
@@ -193,5 +199,9 @@ Every active project has `C:\dev\dev-{project}\wip\todo.md`. The todo.md is proj
 | dev-pdlf docmap | `C:\dev\dev-pdlf\docs-local\docmap.md` | PDLF project document map |
 | docs-manager skill | `~/.config/opencode/skills/docs-manager/SKILL.md` | Skill definition — document inventory, update rules, workflow |
 | | Windows: `\\wsl.localhost\Ubuntu\home\dev-p\.config\opencode\skills\docs-manager\SKILL.md` | |
-| docs-manager agent | `~/.config/opencode/agents/docs-manager.md` | Sub-agent — Phase 1 scan prompts, read-only |
-| | Windows: `\\wsl.localhost\Ubuntu\home\dev-p\.config\opencode\agents\docs-manager.md` | |
+| docs-manager sub-agents (4 files) | `~/.config/opencode/agents/docs-manager-backup.md`, `docs-manager-scan.md`, `docs-manager-apply.md`, `docs-manager-commit.md` | One sub-agent per phase (0 backup, 1 scan, 4 apply, 6 commit/push), each with only the permissions its phase needs |
+| | Windows: `\\wsl.localhost\Ubuntu\home\dev-p\.config\opencode\agents\` | |
+
+**Retired:** `scaffold-system.html` is no longer a managed companion document — it was a
+one-time HTML visual aid, now archived to `C:\mybizz\archive\` as a historical record rather
+than actively maintained.
