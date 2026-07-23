@@ -62,14 +62,14 @@ C:\dev\
 │   ├── mb5pdlf-project-library/ ← Docs repo
 │   └── wip/                    ← Project WIP (contains todo.md)
 ├── dev-pdlf/                   ← ACTIVE PROJECT (PDLF — docs-only, no separate code repo)
-│   ├── pdlf/                   ← Main project docs
+│   ├── pdlf/                   ← Output staging for deployment
 │   ├── wip/                    ← Project WIP (contains todo.md)
 │   └── (many subfolders — see dev-pdlf/docs-local/docmap.md)
-├── docmap.md                   ← THIS FILE — full division hierarchy map
 ├── dev-root/                    ← Division-level inventory and mapping docs
 │   ├── docmap.md                ← Full division hierarchy map
 │   └── project-inventory.md     ← Project registry (paths, repos, GBrain, GStack)
 ├── obsolete/                   ← Dev-level obsolete. Developer purges only.
+├── starting-prompt.txt          ← Session-template file for agent tasks
 ├── project-library-global/     ← Shared standards and reference for all projects
 │   ├── adr-global/             ← Global architectural decision records
 │   ├── checklists-global/      ← Global checklists
