@@ -87,9 +87,18 @@ C:\dev\
 
 ---
 
-## 3. PDLF Framework — `C:\pdlf\`
+## 3. PDLF Framework — `C:\pdlf\` — **excluded from Docs Manager, see note**
 
-The deployed PDLF tool. Not a project — it's the product. References `project-library-global` via absolute path.
+**Current status: placeholder, not live.** This is the remains of a first, aborted attempt at
+building PDLF — implemented halfway, then abandoned. It is not the deployed product yet; it may
+have reference value in showing how that earlier attempt was structured, but nothing here
+should be treated as current. dev-PDLF is where the real framework is being built; once that
+concludes, the finished framework will be deployed here.
+
+**Deliberately excluded from Docs Manager's walk root** (SKILL.md Section 1.1) — scanning a
+placeholder that nobody is maintaining would just generate drift noise about content that isn't
+meant to be current. **This should be revisited once dev-PDLF actually deploys here** — at that
+point `C:\pdlf\` becomes live and belongs back in scope as a fourth walk root.
 
 ```
 C:\pdlf\
