@@ -5,8 +5,8 @@ top-level view across all projects under `C:\dev\`. It does not cover Docs Manag
 mb-align-docs themselves; those have their own READMEs in this same folder
 (`docs-manager-README.md`, `mb-align-docs-README.md`).
 
-> Note: this file is a reconstruction. The original was overwritten during Docs Manager's setup.
-> Review closely and correct anything that doesn't match what was actually here before.
+> Note: this file was reconstructed after the original was overwritten during Docs Manager's setup.
+> Verified/corrected 2026-07-27 against current state of docmap.md and project-inventory.md.
 
 ---
 
@@ -14,8 +14,8 @@ mb-align-docs themselves; those have their own READMEs in this same folder
 
 | File | What it is |
 |---|---|
-| `docmap.md` | The map of the `C:\dev\` folder structure itself — divisions, standard project layout, global vs. local folders |
-| `project-inventory.md` | The list of active projects under `C:\dev\`, one row per project, kept current |
+| `docmap.md` | The **full Mybizz division hierarchy map** — covers `C:\dev\`, `C:\mybizz\`, `C:\pdlf\`, `C:\projects-reference\` plus file placement rules |
+| `project-inventory.md` | The **certified project registry** — all projects, their local paths, GitHub repos, branches, GBrain sources, GStack artifact paths, and repository status (active/inactive) |
 | `docs-manager-README.md` | Short-form guide to Docs Manager, which keeps `docmap.md`, `project-inventory.md`, and per-project README/AGENTS/INDEX files accurate against the real filesystem |
 | `mb-align-docs-README.md` | Short-form guide to mb-align-docs, which keeps document *content* (terminology, requirements, cross-references, identifiers) internally consistent within a project's documentation |
 

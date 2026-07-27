@@ -68,7 +68,7 @@ that finding.
 | Session/window closed mid-run | Just run `/mb-align-docs` again — it'll find the unfinished run and ask if you want to resume |
 | It says a repo is dirty | Commit or clean that repo's git status, then run it again |
 | Something looks off after a run | Check `C:\mybizz\logs\mb-align-docs\last-completed-run\` — it has the full detail |
-| Need to undo something | Files: restore from `C:\backup-mb-align-docs\<timestamp>\`. Renames/moves: check `git log` in the relevant repo |
+| Need to undo something | Files: restore from `C:\backups-general\backup-mb-align-docs_<timestamp>\`. Renames/moves: check `git log` in the relevant repo |
 | Want the exact rule for something | `SKILL.md`, in the skill-store folder — it's the full spec this README summarizes |
 
 ---
@@ -117,7 +117,7 @@ that finding.
 | `last-completed-run\` | Full detail of most recent finished run |
 | `abandoned-runs\` | Declined-resume runs — kept, never deleted |
 
-`C:\backup-mb-align-docs\` — verified backups, one snapshot per run.
+`C:\backups-general\backup-mb-align-docs_<timestamp>\` — verified backups, one snapshot per run.
 
 ### D. Registers and Quarantine — one set per project, plus one global set
 
@@ -127,12 +127,7 @@ that finding.
 | mb-3-cs | `C:\dev\dev-mb-3-cs\mb-3-cs-project-library\register-local\` | `C:\dev\dev-mb-3-cs\mb-3-cs-project-library\Quarantine\` |
 | mb4ecom | `C:\dev\dev-mb4ecom\mb4ecom-project-library\register-local\` | `C:\dev\dev-mb4ecom\mb4ecom-project-library\Quarantine\` |
 | mb5pdlf | `C:\dev\dev-mb5pdlf\mb5pdlf-project-library\register-local\` | `C:\dev\dev-mb5pdlf\mb5pdlf-project-library\Quarantine\` |
-| pdlf | `C:\dev\dev-pdlf\register-local\` | `C:\dev\dev-pdlf\Quarantine\` |
-
-> **Open item:** `dev-pdlf` has no `project-library` subfolder — its register and Quarantine sit
-> directly under `dev-pdlf`, unlike the other three projects. Not yet confirmed whether this is
-> intentional (pdlf has no separate code repo, per its project structure) or drift that should be
-> normalized to match the others. Resolve before the first real run against pdlf.
+| makepdlf | `C:\dev\dev-makepdlf\makepdlf-project-library\register-local\` | `C:\dev\dev-makepdlf\makepdlf-project-library\Quarantine\` |
 
 `register-global` is reserved for `project-library-global` only. Every per-project register is
 named `register-local`. Each register folder holds either a populated register file or, until
