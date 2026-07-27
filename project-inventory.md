@@ -1,10 +1,10 @@
 ---
 title: Project Inventory
 description: Certified project registry for all Anvil.works projects — local paths, GitHub repos and branches, GBrain sources, and GStack artifact paths. Merged with the standalone git-repo-inventory.md (2026-07-23) as the single source of truth for repository tracking.
-version: 2.3
+version: 2.5
 date: 2026-07-09
-updated: 2026-07-23
-verified: 2026-07-23
+updated: 2026-07-27
+verified: 2026-07-27
 ---
 
 ## Registered Projects
@@ -13,7 +13,7 @@ verified: 2026-07-23
 - Code repo (Local): `/mnt/c/dev/dev-mb-3-cs/mb-3-cs`
 - Code repo (Anvil/GitHub): `https://github.com/sassycomapp/mb-3-cs` — branch `master`
 - Code repo (GBrain): `mb-3-cs-code`
-- Documentation repo (Local): `/mnt/c/dev/dev-mb-3-cs/project-library`
+- Documentation repo (Local): `/mnt/c/dev/dev-mb-3-cs/mb-3-cs-project-library`
 - Documentation repo (GitHub): `https://github.com/sassycomapp/mb-3-cs-project-library` — branch `main`
 - Documentation repo (GBrain): `mb-3-cs-project-library`
 - Documentation repo (GStack) WSL access: `~/.gstack/projects/sassycomapp-project-library`
@@ -39,13 +39,14 @@ verified: 2026-07-23
 - Documentation repo (GStack) WSL access: `~/.gstack/projects/sassycomapp-mb5pdlf-project-library`
 - Documentation repo (GStack) Windows access: `\\wsl.localhost\Ubuntu\home\dev-p\.gstack\projects\sassycomapp-mb5pdlf-project-library`
 
-### dev-pdlf
-- Documentation repo (Local): `/mnt/c/dev/dev-pdlf`
-- Documentation repo (GitHub): `https://github.com/sassycomapp/dev-pdlf` — branch `main`
-- Documentation repo (GBrain): `dev-pdlf`
-- Documentation repo (GStack) WSL access: `~/.gstack/projects/sassycomapp-dev-pdlf`
-- Documentation repo (GStack) Windows access: `\\wsl.localhost\Ubuntu\home\dev-p\.gstack\projects\sassycomapp-dev-pdlf`
-- Note: Documentation-only project. No separate code repo.
+### dev-makepdlf
+- Code repo (Local): `/mnt/c/dev/dev-makepdlf/makepdlf` (empty shell, no remote yet)
+- Documentation repo (Local): `/mnt/c/dev/dev-makepdlf/makepdlf-project-library`
+- Documentation repo (GitHub): `https://github.com/sassycomapp/makepdlf-project-library` — branch `main`
+- Documentation repo (GBrain): `dev-makepdlf`
+- Documentation repo (GStack) WSL access: `~/.gstack/projects/sassycomapp-makepdlf-project-library`
+- Documentation repo (GStack) Windows access: `\\wsl.localhost\Ubuntu\home\dev-p\.gstack\projects\sassycomapp-makepdlf-project-library`
+- Note: Previously docs-only single repo (dev-pdlf). Renamed 2026-07-25. Code repo directory exists but is empty — no GitHub remote assigned yet.
 
 ### pdlf
 - Local path: `/mnt/c/pdlf`
@@ -84,12 +85,12 @@ below.
 | Local Path | GitHub Remote | Branch |
 |---|---|---|
 | `C:\dev\dev-mb-3-cs\mb-3-cs\` | `https://github.com/sassycomapp/mb-3-cs` | `master` |
-| `C:\dev\dev-mb-3-cs\project-library\` | `https://github.com/sassycomapp/mb-3-cs-project-library.git` | `main` |
+| `C:\dev\dev-mb-3-cs\mb-3-cs-project-library\` | `https://github.com/sassycomapp/mb-3-cs-project-library.git` | `main` |
 | `C:\dev\dev-mb4ecom\mb4ecom\` | `https://github.com/sassycomapp/mb4ecom` | `master` |
 | `C:\dev\dev-mb4ecom\mb4ecom-project-library\` | `https://github.com/sassycomapp/mb4ecom-project-library.git` | `master` |
 | `C:\dev\dev-mb5pdlf\mb5pdlf\` | `https://github.com/sassycomapp/mb5pdlf.git` | `master` |
 | `C:\dev\dev-mb5pdlf\mb5pdlf-project-library\` | `https://github.com/sassycomapp/mb5pdlf-project-library.git` | `master` |
-| `C:\dev\dev-pdlf\` | `https://github.com/sassycomapp/dev-pdlf.git` | `main` |
+| `C:\dev\dev-makepdlf\makepdlf-project-library\` | `https://github.com/sassycomapp/makepdlf-project-library.git` | `main` |
 | `C:\dev\dev-root\` | `https://github.com/sassycomapp/dev-root-hub.git` | `main` |
 | `C:\dev\project-library-global\` | `https://github.com/sassycomapp/project-library-global.git` | `main` |
 | `C:\projects-reference\` | `https://github.com/sassycomapp/projects-reference.git` | `main` |
@@ -102,7 +103,8 @@ audit trail, not because Docs Manager acts on them.
 | Local Path | Status |
 |---|---|
 | `C:\dev\obsolete\dev-project-template\` | Remote: `sassycomapp/project-library-dev-project-template.git` — obsolete. Also excluded from scanning entirely by the `obsolete` name-pattern rule (SKILL.md Section 1.2.4). |
-| `C:\dev\project-template\dev-(SLUG)\project-library\` | No `.git` directory — template, not version-controlled. Reported as `NO_REPO` by Phase 6 if ever touched, which is expected, not an error. |
+| `C:\dev\project-template\` (outer) | `.git` initialized 2026-07-27 — minimal wrapper repo tracking `.gitignore` and code-repo placeholder. No remote. |
+| `C:\dev\project-template\dev-(SLUG)\(slug)-project-library\` (inner) | `.git` initialized 2026-07-27 — template project-library with committed history. No remote. |
 
 ### Installed Tools (Read-Only)
 

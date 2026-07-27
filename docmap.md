@@ -2,8 +2,8 @@
 
 **Purpose:** Single canonical navigation map for the Mybizz division — where every folder lives, what it is for, and where new files should go. Agents read this to understand the territory.
 
-**Date:** 2026-07-23
-**Verified:** 2026-07-23
+**Date:** 2026-07-27
+**Verified:** 2026-07-27
 
 **Companion:** `project-inventory.md` (same folder) — project-level paths, GitHub repos, GBrain sources, GStack artifact paths.
 
@@ -42,7 +42,7 @@ mapping documents.
 C:\dev\
 ├── dev-mb-3-cs/                ← ACTIVE PROJECT (mb-3-cs)
 │   ├── mb-3-cs/                ← Code repo
-│   ├── project-library/        ← Docs repo
+│   ├── mb-3-cs-project-library/        ← Docs repo
 │   └── wip/                    ← Project WIP (contains todo.md)
 ├── dev-mb4ecom/                ← ACTIVE PROJECT (mb4ecom)
 │   ├── mb4ecom/                ← Code repo
@@ -52,10 +52,10 @@ C:\dev\
 │   ├── mb5pdlf/                ← Code repo
 │   ├── mb5pdlf-project-library/ ← Docs repo
 │   └── wip/                    ← Project WIP (contains todo.md)
-├── dev-pdlf/                   ← ACTIVE PROJECT (PDLF — docs-only, no separate code repo)
-│   ├── pdlf/                   ← Output staging for deployment
-│   ├── wip/                    ← Project WIP (contains todo.md)
-│   ├── (many subfolders — see dev-pdlf/docs-local/docmap.md)
+├── dev-makepdlf/                ← ACTIVE PROJECT (makepdlf)
+│   ├── makepdlf/                 ← Code repo (empty shell, no remote yet)
+│   ├── makepdlf-project-library/  ← Documentation repo
+│   └── wip/                      ← Project WIP (contains todo.md)
 ├── dev-root/                    ← Division-level inventory and mapping docs
 │   ├── docmap.md                ← Full division hierarchy map
 │   └── project-inventory.md     ← Project registry (paths, repos, GBrain, GStack)
@@ -79,12 +79,12 @@ C:\dev\
 **Current status: placeholder, not live.** This is the remains of a first, aborted attempt at
 building PDLF — implemented halfway, then abandoned. It is not the deployed product yet; it may
 have reference value in showing how that earlier attempt was structured, but nothing here
-should be treated as current. dev-PDLF is where the real framework is being built; once that
+should be treated as current. dev-makepdlf is where the real framework is being built; once that
 concludes, the finished framework will be deployed here.
 
 **Deliberately excluded from Docs Manager's walk root** (SKILL.md Section 1.1) — scanning a
 placeholder that nobody is maintaining would just generate drift noise about content that isn't
-meant to be current. **This should be revisited once dev-PDLF actually deploys here** — at that
+meant to be current. **This should be revisited once dev-makepdlf actually deploys here** — at that
 point `C:\pdlf\` becomes live and belongs back in scope as a fourth walk root.
 
 ```
@@ -198,7 +198,7 @@ Every active project has `C:\dev\dev-{project}\wip\todo.md`. The todo.md is proj
 | Global AGENTS.md | `~/.config/opencode/AGENTS.md` | Global agent behavior rules |
 | Project AGENTS.md | `C:\dev\dev-{project}\AGENTS.md` | Per-project agent rules |
 | daily-ops.md | `C:\projects-reference\workspace-reference\workflow reference\daily-ops.md` | Daily operations quick reference |
-| dev-pdlf docmap | `C:\dev\dev-pdlf\docs-local\docmap.md` | PDLF project document map |
+| dev-makepdlf docmap | `C:\dev\dev-makepdlf\makepdlf-project-library\docs-local\docmap.md` | PDLF project document map |
 | docs-manager skill | `~/.config/opencode/skills/docs-manager/SKILL.md` | Skill definition — document inventory, update rules, workflow |
 | | Windows: `\\wsl.localhost\Ubuntu\home\dev-p\.config\opencode\skills\docs-manager\SKILL.md` | |
 | docs-manager sub-agents (4 files) | `~/.config/opencode/skills/docs-manager/docs-manager-backup.md`, `docs-manager-scan.md`, `docs-manager-apply.md`, `docs-manager-commit.md` | One sub-agent per phase (0 backup, 1 scan, 4 apply, 6 commit/push), each with only the permissions its phase needs |
