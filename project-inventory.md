@@ -48,6 +48,14 @@ verified: 2026-07-27
 - Documentation repo (GStack) Windows access: `\\wsl.localhost\Ubuntu\home\dev-p\.gstack\projects\sassycomapp-makepdlf-project-library`
 - Note: Previously docs-only single repo (dev-pdlf). Renamed 2026-07-25. Code repo directory exists but is empty — no GitHub remote assigned yet.
 
+### project-template
+- Repo (Local): `/mnt/c/dev/project-template`
+- Repo (GitHub): `https://github.com/sassycomapp/project-template` — branch `master`
+- GBrain (outer): not registered (path overlaps with inner source)
+- Inner template (Local): `/mnt/c/dev/project-template/dev-(SLUG)/(slug)-project-library`
+- Inner template (GBrain): `template-project-library`
+- Note: Skeleton for new projects. The outer repo is a minimal wrapper. The inner `(slug)-project-library` is the parametrized project-library template with placeholder tokens.
+
 ### pdlf
 - Local path: `/mnt/c/pdlf`
 - GBrain: `pdlf`
@@ -93,6 +101,7 @@ below.
 | `C:\dev\dev-makepdlf\makepdlf-project-library\` | `https://github.com/sassycomapp/makepdlf-project-library.git` | `main` |
 | `C:\dev\dev-root\` | `https://github.com/sassycomapp/dev-root-hub.git` | `main` |
 | `C:\dev\project-library-global\` | `https://github.com/sassycomapp/project-library-global.git` | `main` |
+| `C:\dev\project-template\` | `https://github.com/sassycomapp/project-template.git` | `master` |
 | `C:\projects-reference\` | `https://github.com/sassycomapp/projects-reference.git` | `main` |
 
 ### Inactive / No Remote
@@ -103,8 +112,7 @@ audit trail, not because Docs Manager acts on them.
 | Local Path | Status |
 |---|---|
 | `C:\dev\obsolete\dev-project-template\` | Remote: `sassycomapp/project-library-dev-project-template.git` — obsolete. Also excluded from scanning entirely by the `obsolete` name-pattern rule (SKILL.md Section 1.2.4). |
-| `C:\dev\project-template\` (outer) | `.git` initialized 2026-07-27 — minimal wrapper repo tracking `.gitignore` and code-repo placeholder. No remote. |
-| `C:\dev\project-template\dev-(SLUG)\(slug)-project-library\` (inner) | `.git` initialized 2026-07-27 — template project-library with committed history. No remote. |
+| `C:\dev\project-template\dev-(SLUG)\(slug)-project-library\` (inner) | `.git` initialized 2026-07-27 — parametrized template library. No remote (by design — placeholders). |
 
 ### Installed Tools (Read-Only)
 
