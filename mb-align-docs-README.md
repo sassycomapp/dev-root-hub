@@ -100,7 +100,7 @@ that finding.
 
 | File | Job |
 |---|---|
-| `dev-root-README.md` | Covers `docmap.md` and `project-inventory.md` only. *Pending rewrite by OpenCode from live filesystem/doc research — no reliable original content exists to restore from.* |
+| `dev-root-README.md` | Covers `docmap.md` and `project-inventory.md`. Verified/corrected and current — not pending rewrite. |
 | `docs-manager-README.md` | Short-form guide to Docs Manager |
 | `mb-align-docs-README.md` | This file |
 | `docmap.md` | Map of the `C:\dev\` folder structure — Docs Manager's territory |
