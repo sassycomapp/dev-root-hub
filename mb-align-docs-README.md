@@ -68,7 +68,7 @@ that finding.
 | Session/window closed mid-run | Just run `/mb-align-docs` again — it'll find the unfinished run and ask if you want to resume |
 | It says a repo is dirty | Commit or clean that repo's git status, then run it again |
 | Something looks off after a run | Check `C:\mybizz\logs\mb-align-docs\last-completed-run\` — it has the full detail |
-| Need to undo something | Files: restore from `C:\backups-general\backup-mb-align-docs_<timestamp>\`. Renames/moves: check `git log` in the relevant repo |
+| Need to undo something | Files: restore from `C:\backup-mb-align-docs\<timestamp>\`. Renames/moves: check `git log` in the relevant repo |
 | Want the exact rule for something | `SKILL.md`, in the skill-store folder — it's the full spec this README summarizes |
 
 ---
@@ -117,7 +117,7 @@ that finding.
 | `last-completed-run\` | Full detail of most recent finished run |
 | `abandoned-runs\` | Declined-resume runs — kept, never deleted |
 
-`C:\backups-general\backup-mb-align-docs_<timestamp>\` — verified backups, one snapshot per run.
+`C:\backup-mb-align-docs\<timestamp>\` — verified backups, one snapshot per run.
 
 ### D. Registers and Quarantine — one set per project, plus one global set
 

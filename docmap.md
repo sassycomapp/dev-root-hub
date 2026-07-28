@@ -169,7 +169,7 @@ C:\projects-reference\
 | Custom skills | `C:\projects-reference\custom-skills-store\` |
 | Reference docs (how-to, tool docs) | `C:\projects-reference\workspace-reference\` |
 | Completed projects | `C:\projects-reference\deployed-projects\` |
-| Backups | `C:\mybizz\backup-mybizz\` (new folder per backup exercise) |
+| Backups | Docs Manager: `C:\backup-docs-manager\<timestamp>\`. mb-align-docs: `C:\backup-mb-align-docs\<timestamp>\`. All other/general backups: `C:\backups-general\` (new folder per backup exercise). |
 | System and tool logs | `C:\mybizz\logs\{tool}\` (e.g., `C:\mybizz\logs\gbrain-logs\`, `C:\mybizz\logs\github-logs\`) |
 
 ### archive vs obsolete
