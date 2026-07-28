@@ -19,6 +19,11 @@ C:\mybizz\
 ├── logs/                       ← System and tool logs
 │   ├── docs-manager/           ← docs-manager skill run logs
 │   │   └── Learnings/          ← docs-manager institutional memory, one file per learning
+│   ├── mb-align-docs/          ← mb-align-docs skill run logs
+│   │   ├── abandoned-runs/     ← Declined-resume runs, kept, never deleted
+│   │   ├── in-progress/        ← Current run only — resume source if interrupted
+│   │   ├── last-completed-run/ ← Full detail of most recent finished run
+│   │   └── learnings/          ← Judgment calls from past runs
 │   ├── github-logs/            ← Commit/push reports and closing git-status snapshots
 │   └── gbrain-logs/            ← GBrain sync per-source logs
 ├── matt-skills-teach/          ← Installed tool (not user-managed)
@@ -160,7 +165,7 @@ C:\projects-reference\
 | Custom skills | `C:\projects-reference\custom-skills-store\` |
 | Reference docs (how-to, tool docs) | `C:\projects-reference\workspace-reference\` |
 | Completed projects | `C:\projects-reference\deployed-projects\` |
-| Backups | `C:\mybizz\backup-mybizz\` (new folder per backup exercise) |
+| Backups | `C:\backups-general\` (one subfolder per tool/run, e.g. `backup-docs-manager_<timestamp>\`, `backup-mb-align-docs_<timestamp>\`) |
 | System and tool logs | `C:\mybizz\logs\{tool}\` (e.g., `C:\mybizz\logs\gbrain-logs\`, `C:\mybizz\logs\github-logs\`) |
 
 ### archive vs obsolete

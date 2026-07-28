@@ -58,7 +58,7 @@ repo, a failed backup), and when it has a report ready for you to review.
 | `...\in-progress\` | The *current* run only, updated as it goes — if a session dies mid-run, this is what it resumes from |
 | `...\last-completed-run\` | Full detail of the most recent finished run — the place to look if something needs tracing back |
 | `...\abandoned-runs\` | Runs you chose to discard rather than resume — kept, never deleted |
-| `C:\backup-docs-manager\` | Safety copies of the five file types, one snapshot per run |
+| `C:\backups-general\backup-docs-manager_<timestamp>\` | Safety copies of the five file types, one snapshot per run |
 | `C:\mybizz\logs\github-logs\` | Commit/push results, closing git-status snapshots |
 
 ## The five sub-agent files, one line each
@@ -89,5 +89,5 @@ repo, a failed backup), and when it has a report ready for you to review.
 | Session/window closed mid-run | Just run `/docs-manager` again — it'll find the unfinished run and ask if you want to resume |
 | It says a repo is dirty | Commit or clean that repo's git status, then run it again |
 | Something looks off after a run | Check `C:\mybizz\logs\docs-manager\last-completed-run\` — it has the full detail of exactly what happened |
-| Need to undo something | Files: restore from `C:\backup-docs-manager\<timestamp>\`. Renames/moves: check `git log` in the relevant repo |
+| Need to undo something | Files: restore from `C:\backups-general\backup-docs-manager_<timestamp>\`. Renames/moves: check `git log` in the relevant repo |
 | Want the exact rule for something | `SKILL.md`, same folder — it's the full spec this README summarizes |
