@@ -3,8 +3,8 @@ title: Project Inventory
 description: Certified project registry for all Anvil.works projects — local paths, GitHub repos and branches, GBrain sources, and GStack artifact paths. Merged with the standalone git-repo-inventory.md (2026-07-23) as the single source of truth for repository tracking.
 version: 2.5
 date: 2026-07-09
-updated: 2026-07-27
-verified: 2026-07-27
+updated: 2026-07-30
+verified: 2026-07-30
 ---
 
 ## Registered Projects

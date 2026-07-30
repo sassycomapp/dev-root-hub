@@ -3,7 +3,7 @@
 **Purpose:** Single canonical navigation map for the Mybizz division — where every folder lives, what it is for, and where new files should go. Agents read this to understand the territory.
 
 **Date:** 2026-07-23
-**Verified:** 2026-07-23
+**Verified:** 2026-07-30T095932+0200
 
 **Companion:** `project-inventory.md` (same folder) — project-level paths, GitHub repos, GBrain sources, GStack artifact paths.
 
@@ -21,12 +21,10 @@ C:\mybizz\
 │   ├── local-testing-example/  ← Archived testing example
 │   ├── mybizz-core-methods/    ← Archived ADRs + methods
 │   └── prompts-example/        ← Archived prompt examples
-├── backup-mybizz/              ← BACKUP ONLY. Agents may read (with caution) but never edit or delete.
-├── Desktop/                    ← Active working desktop environment
-│   ├── Notebooks/              ← OneNote notebooks
-│   ├── Notebooks-look for good/ ← Additional notebooks
-│   ├── pc-mapping/             ← PC hierarchy diagrams (HTML)
-│   └── wip/                    ← Personal daily scratchpad (contains todo.txt)
+├── backups-general/            ← General backup destination. Agents may read (with caution) but never edit or delete.
+├── WIP/                        ← Active work-in-progress
+│   ├── desktop/                 ← Personal desktop workspace
+│   └── review-for-mybizz-(new-import)/ ← Imported reference content under review
 ├── gbrain/                     ← Installed tool (not user-managed)
 ├── gstack/                     ← Installed tool (not user-managed)
 ├── logs/                       ← System and tool logs
@@ -42,6 +40,7 @@ C:\mybizz\
 │   ├── namecheap-order-196053207.pdf
 │   └── obsolete/               ← Mgt-level obsolete items. Developer purges only.
 ├── scripts/                    ← Global utility scripts for this PC
+├── matt-skills-teach/           ← Matt Pocock teach skill output
 └── skills/                     ← Installed tool (not user-managed)
 ```
 
@@ -67,15 +66,15 @@ C:\dev\
 │   ├── mb5pdlf/                ← Code repo
 │   ├── mb5pdlf-project-library/ ← Docs repo
 │   └── wip/                    ← Project WIP (contains todo.md)
-├── dev-pdlf/                   ← ACTIVE PROJECT (PDLF — docs-only, no separate code repo)
-│   ├── pdlf/                   ← Output staging for deployment
+├── dev-makepdlf/               ← ACTIVE PROJECT (PDLF framework development)
+│   ├── makepdlf-project-library/ ← Docs repo
+│   ├── makepdlf/               ← Code repo (empty shell, no remote yet)
 │   ├── wip/                    ← Project WIP (contains todo.md)
-│   └── (many subfolders — see dev-pdlf/docs-local/docmap.md)
+│   └── (many subfolders — see dev-makepdlf/makepdlf-project-library/docs-local/docmap.md)
 ├── dev-root/                    ← Division-level inventory and mapping docs
 │   ├── docmap.md                ← Full division hierarchy map
 │   └── project-inventory.md     ← Project registry (paths, repos, GBrain, GStack)
 ├── obsolete/                   ← Dev-level obsolete. Developer purges only.
-├── starting-prompt.txt          ← Session-template file for agent tasks
 ├── project-library-global/     ← Shared standards and reference for all projects
 │   ├── adr-global/             ← Global architectural decision records
 │   ├── checklists-global/      ← Global checklists
@@ -125,6 +124,7 @@ created afterward and it is now tracked normally again as an Active Repository �
 C:\projects-reference\
 ├── custom-skills-store/        ← Custom skills (built or planned)
 ├── deployed-projects/          ← Completed project storage (currently empty)
+├── WIP/                        ← Active work-in-progress reference content
 └── workspace-reference/        ← How-to references for tools, apps, custom methods
     ├── Anvil-reference/
     ├── cloudflare-reference/
@@ -163,7 +163,7 @@ C:\projects-reference\
 | Global standards (ADRs, policies, specs, SOPs) | `C:\dev\project-library-global\{category}\` |
 | Global how-to guides | `C:\dev\project-library-global\guides\` |
 | Business documents (financial, planning) | `C:\mybizz\Mgt\` |
-| Daily working files / scratchpad | `C:\mybizz\Desktop\` or `C:\mybizz\Desktop\wip\` |
+| Daily working files / scratchpad | `C:\mybizz\WIP\desktop\` |
 | Completed work for long-term reference | `C:\mybizz\archive\` |
 | Temporary trash during a session | `C:\dev\obsolete\` (dev items) or `C:\mybizz\Mgt\obsolete\` (mgt items) |
 | Custom skills | `C:\projects-reference\custom-skills-store\` |
@@ -208,11 +208,11 @@ Every active project has `C:\dev\dev-{project}\wip\todo.md`. The todo.md is proj
 | Global AGENTS.md | `~/.config/opencode/AGENTS.md` | Global agent behavior rules |
 | Project AGENTS.md | `C:\dev\dev-{project}\AGENTS.md` | Per-project agent rules |
 | daily-ops.md | `C:\projects-reference\workspace-reference\workflow reference\daily-ops.md` | Daily operations quick reference |
-| dev-pdlf docmap | `C:\dev\dev-pdlf\docs-local\docmap.md` | PDLF project document map |
+| dev-makepdlf docmap | `C:\dev\dev-makepdlf\makepdlf-project-library\docs-local\docmap.md` | PDLF project document map |
 | docs-manager skill | `~/.config/opencode/skills/docs-manager/SKILL.md` | Skill definition — document inventory, update rules, workflow |
 | | Windows: `\\wsl.localhost\Ubuntu\home\dev-p\.config\opencode\skills\docs-manager\SKILL.md` | |
-| docs-manager sub-agents (5 files) | `~/.config/opencode/agents/docs-manager-backup.md`, `docs-manager-scan.md`, `docs-manager-apply.md`, `docs-manager-filesystem.md`, `docs-manager-commit.md` | One sub-agent per phase (0 backup, 1 scan, 4a text edits, 4b file-system operations, 6 commit/push), each with only the permissions its phase needs |
-| | Windows: `\\wsl.localhost\Ubuntu\home\dev-p\.config\opencode\agents\` | |
+| docs-manager sub-agents (5 files) | `~/.config/opencode/skills/docs-manager/docs-manager-backup.md`, `docs-manager-scan.md`, `docs-manager-apply.md`, `docs-manager-filesystem.md`, `docs-manager-commit.md` | One sub-agent per phase (0 backup, 1 scan, 4a text edits, 4b file-system operations, 6 commit/push), each with only the permissions its phase needs |
+| | Windows: `\\wsl.localhost\Ubuntu\home\dev-p\.config\opencode\skills\docs-manager\` | |
 
 **Retired:** `scaffold-system.html` is no longer a managed companion document — it was a
 one-time HTML visual aid, now archived to `C:\mybizz\archive\` as a historical record rather
