@@ -131,4 +131,4 @@ excluded via the name-pattern rule.
 
 ## Companion document
 
-`docmap.md` (at `C:\dev\dev-root\docmap.md`) is the full hierarchy map for the Mybizz division.
+[[docmap|Docmap]] (at [[docmap|Docmap]]) is the full hierarchy map for the Mybizz division.

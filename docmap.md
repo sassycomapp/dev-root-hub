@@ -5,7 +5,7 @@
 **Date:** 2026-07-23
 **Verified:** 2026-07-30T095932+0200
 
-**Companion:** `project-inventory.md` (same folder) — project-level paths, GitHub repos, GBrain sources, GStack artifact paths.
+**Companion:** [[project-inventory|Project Inventory]] (same folder) — project-level paths, GitHub repos, GBrain sources, GStack artifact paths.
 
 ---
 
@@ -203,7 +203,7 @@ Every active project has `C:\dev\dev-{project}\wip\todo.md`. The todo.md is proj
 | Document | Location | Purpose |
 |---|---|---|
 | `docmap.md` | `C:\dev\dev-root\docmap.md` | THIS FILE — full division hierarchy map |
-| `project-inventory.md` | `C:\dev\dev-root\project-inventory.md` | Project registry (paths, repos, GBrain, GStack) — single source of truth for repo/remote tracking |
+| [[project-inventory|Project Inventory]] | [[project-inventory|Project Inventory]] | Project registry (paths, repos, GBrain, GStack) — single source of truth for repo/remote tracking |
 | `README.md` | `C:\mybizz\README.md` | Division workspace overview |
 | Global AGENTS.md | `~/.config/opencode/AGENTS.md` | Global agent behavior rules |
 | Project AGENTS.md | `C:\dev\dev-{project}\AGENTS.md` | Per-project agent rules |

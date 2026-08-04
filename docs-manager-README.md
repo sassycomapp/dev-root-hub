@@ -11,9 +11,9 @@ this first, read `SKILL.md` only when you need the exact rule for something.
 
 ## What it is
 
-Docs Manager keeps a handful of "map" documents — `docmap.md`, `project-inventory.md`, and the
+Docs Manager keeps a handful of "map" documents — [[docmap|Docmap]], [[project-inventory|Project Inventory]], and the
 `README.md`/`AGENTS.md`/`INDEX.md` files scattered through your project folders — accurate
-against what's actually on disk. Think of `docmap.md` as a map of a city: the real city (your
+against what's actually on disk. Think of [[docmap|Docmap]] as a map of a city: the real city (your
 folders and files) keeps changing, and over time the map stops matching it. Docs Manager walks
 the city, notices where the map is wrong, and redraws it — it never touches the city itself. It
 works in five small, single-job pieces: one checks your git repos are clean and takes a safety
