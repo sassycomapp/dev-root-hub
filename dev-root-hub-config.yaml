@@ -31,7 +31,7 @@ register_local:
 
 key_documents:
   - docmap.md
-  - project-inventory.md (being phased out, see docmap.md Section 8)
+  - project-inventory.md (retired 2026-08-13; see docmap.md Section 8)
   - README.md
 
 skill_exclusions:
