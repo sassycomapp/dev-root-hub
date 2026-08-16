@@ -1,0 +1,41 @@
+---
+project: dev-root-hub
+status: active
+verified: 2026-08-13
+---
+
+local_path: /mnt/c/dev/dev-root
+github_remote: https://github.com/sassycomapp/dev-root-hub.git
+github_branch: main
+note: division-level inventory/mapping hub, not a code+docs project pair
+
+opencode_config:
+  exists: false
+
+agents_file:
+  exists: false
+
+agent_role_files:
+  exists: false
+
+gbrain:
+  source_id: dev-root-hub
+  pages: 20
+
+graphify:
+  installed: false
+  note: no code here to analyze
+
+register_local:
+  exists: false
+
+key_documents:
+  - docmap.md
+  - project-inventory.md (being phased out, see docmap.md Section 8)
+  - README.md
+
+skill_exclusions:
+  - none_checked
+
+opencode_default:
+  is_current_default: false
