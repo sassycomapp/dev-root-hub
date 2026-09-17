@@ -10,7 +10,7 @@ date-created: 2026-07-21
 **Purpose:** Single canonical navigation map for the Mybizz division — where every folder lives, what it is for, and where new files should go. Agents read this to understand the territory.
 
 **Date:** 2026-07-23
-**Verified:** 2026-09-10
+**Verified:** 2026-09-17
 
 **Companion:** [[projects-config-register]] (`C:\mybizz\mybizz-config-docs\`) — register of every project's `{slug}-config.yaml`. See Section 8.
 
@@ -35,12 +35,32 @@ C:\mybizz\
 │   └── gbrain-logs/            ← GBrain sync logs
 ├── matt-pocock-skills-source/  ← Matt Pocock skills source clone (scaffold exception)
 ├── memory-audit-reports/       ← Memory audit reports (IN SCOPE)
+├── Models/                     ← AI model selection working documents
 ├── mybizz-config-docs/         ← Canonical tool/component doc suites + projects-config-register.md (IN SCOPE)
 ├── mybizz-config.yaml          ← The mybizz folder's own config — documents the scaffold-driven scope
 ├── mybizz-os-docs/             ← System describer/explainer documents (IN SCOPE)
+├── prompts/                    ← Standing prompt/process documents
 ├── scripts/                    ← Global utility scripts (scaffold exception)
 └── README.md                   ← Division workspace overview
 ```
+
+### Division management data — `C:\data-mybizz-mgt\` (IN SCOPE, separate root)
+
+The desktop-level operating documents of the Mybizz/PDLF operating system, plus the
+developer's budget, model, and prompt working files. Not an Anvil project and not a code
+repository. Separate from `C:\pdlf\` — the two must never be merged.
+
+```
+C:\data-mybizz-mgt\
+├── desktop/                    ← Operating documents (daily-ops, master-task-list, deferred-and-unresolved-matters, dev-makepdlf-todo)
+├── WIP/                        ← Working files
+├── archive/                    ← Archived material
+├── temp/                       ← Temporary files
+├── register-local.md           ← Append-only document register
+└── README.md
+```
+
+Note: the folder was renamed from `C:\_data-mybizz-mgt` on 2026-09-14 (underscore dropped).
 
 ---
 
@@ -90,25 +110,22 @@ C:\dev\
 
 ---
 
-## 3. PDLF Framework — `C:\pdlf\` — **excluded from Docs Manager, see note**
+## 3. PDLF Framework — `C:\pdlf\` — **In Active Development**
 
-**Current status: placeholder, not live.** This is the remains of a first, aborted attempt at
-building PDLF — implemented halfway, then abandoned. It is not the deployed product yet; it may
-have reference value in showing how that earlier attempt was structured, but nothing here
-should be treated as current. dev-makepdlf is where the real framework is being built; once that
-concludes, the finished framework will be deployed here.
-
-**Deliberately excluded from Docs Manager's walk root** (SKILL.md Section 1.1) — scanning a
-placeholder that nobody is maintaining would just generate drift noise about content that isn't
-meant to be current. **This should be revisited once dev-makepdlf actually deploys here** — at that
-point `C:\pdlf\` becomes live and belongs back in scope as a fourth walk root.
+**Current status: in active development.** The home of the PDLF system — the Project
+Development Lifecycle Framework — scaffolded live 2026-09-11 (library, app-factory
+machinery, output area, GitHub repo re-established). It is a separate repository from
+`C:\data-mybizz-mgt\`; do not merge the two. The system's machinery is built in the
+makePDLF environment (`C:\dev\dev-makepdlf\`) and migrates here when complete.
 
 ```
 C:\pdlf\
-├── .scratch/
-├── docs/
-├── registry/
-└── skill/
+├── pdlf-library/       ← Canonical technical documentation (ADRs, specs, policies, explainers, register)
+├── app-factory/        ← Machinery — one module per pipeline step (placeholders today, populated by makePDLF)
+├── output/             ← Producer-routed artifact safety net (transient)
+├── AGENTS.md           ← Standing rules for this location
+├── pdlf-config.yaml    ← Config file (registered in projects-config-register.md)
+└── README.md
 ```
 
 ---
@@ -144,7 +161,7 @@ rule in Section 6 — that rule applies to system folders, not personal ones.
 | Tool config reference documents | `C:\mybizz\mybizz-config-docs\{tool}\` |
 | System describer/explainer documents | `C:\mybizz\mybizz-os-docs\` |
 | Business documents (financial, planning) | `C:\mybizz\Mgt\` (convention — folder not currently present; create on first need) |
-| Daily working files / scratchpad | `C:\_data-mybizz-mgt\_desktop\` |
+| Daily working files / scratchpad | `C:\data-mybizz-mgt\desktop\` |
 | Completed work for long-term reference | `C:\mybizz\archive\` |
 | Temporary trash during a session | `C:\dev\obsolete\` (dev items) or `C:\mybizz\Mgt\obsolete\` (mgt items — folder created on first need) |
 | Custom skills (mb-* family) | `~/.config/opencode/skills/` (WSL) — browsable runtime surface |
@@ -204,9 +221,10 @@ Every active project has `C:\dev\dev-{project}\wip\todo.md`. The todo.md is proj
 | `README.md` | `C:\mybizz\README.md` | Division workspace overview |
 | Global `AGENTS.md` | `~/.config/opencode/AGENTS.md` | Global agent behavior rules — authoritative, live |
 | Project `AGENTS.md`/`agents.md` | **Varies per project — see that project's `{slug}-config.yaml`.** No single fixed path pattern exists: some projects have it in the docs repo only, `mb-3-cs` has it in both repos (lowercase `agents.md` in the code repo specifically), some projects have none yet. Do not assume a pattern — check the YAML. |
-| `daily-ops.md` | `C:\_data-mybizz-mgt\_desktop\daily-ops.md` | Daily operations quick reference |
-| `master-task-list.md` | `C:\_data-mybizz-mgt\_desktop\master-task-list.md` | Current active task list |
-| `mybizz-todo.md` | `C:\_data-mybizz-mgt\_desktop\mybizz-todo.md` | Deferred tasks and the OS Setup Task List |
+| `daily-ops.md` | `C:\data-mybizz-mgt\desktop\daily-ops.md` | Daily operations quick reference |
+| `master-task-list.md` | `C:\data-mybizz-mgt\desktop\master-task-list.md` | Current active task list |
+| `mybizz-scope-list.md` | `C:\mybizz\mybizz-os-docs\os-reference-docs\mybizz-scope-list.md` | Scope scaffold — read at Phase 0 of every docs-manager run |
+| `repo-organization.md` | `C:\mybizz\mybizz-os-docs\os-reference-docs\repo-organization.md` | GBrain sources / GitHub repos / local paths correlation table |
 | dev-makepdlf docmap | `C:\dev\dev-makepdlf\makepdlf-project-library\docs-local\docmap.md` | PDLF project document map |
 | docs-manager skill | `~/.config/opencode/skills/mb-docs-manager/SKILL.md` | Skill definition — document inventory, update rules, workflow |
 | | Windows: `\\wsl.localhost\Ubuntu\home\dev-p\.config\opencode\skills\mb-docs-manager\SKILL.md` | |
