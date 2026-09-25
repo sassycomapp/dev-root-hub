@@ -1,10 +1,7 @@
 ---
-document: "dev-root — README"
-doc-id: README
-state: Live
-date-created: 2026-07-25
+title: "README"
+doc-id: "README"
 ---
-
 # dev-root — README
 
 **This file covers `C:\dev\dev-root\` only** — the two division-map documents that give a

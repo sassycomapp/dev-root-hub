@@ -1,10 +1,7 @@
 ---
-document: "Mybizz Division — Docmap"
-doc-id: docmap
-state: Live
-date-created: 2026-07-21
+title: "docmap"
+doc-id: "docmap"
 ---
-
 # Mybizz Division — Docmap
 
 **Purpose:** Single canonical navigation map for the Mybizz division — where every folder lives, what it is for, and where new files should go. Agents read this to understand the territory.
