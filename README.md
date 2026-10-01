@@ -1,6 +1,7 @@
 ---
 title: "README"
 doc-id: "mb-386ec6b4"
+updated: "2026-10-01"
 ---
 # dev-root — README
 
@@ -19,13 +20,13 @@ mb-align-docs themselves; those are documented in the OpenCode skills directory
 | File | What it is |
 |---|---|
 | `docmap.md` | The **full Mybizz division hierarchy map** — covers `C:\dev\`, `C:\mybizz\`, `C:\pdlf\`, `C:\data-mybizz-mgt\` plus file placement rules |
-| [[projects-config-register]] (in `C:\mybizz\mybizz-config-docs\`) | The **central config register** — one `{slug}-config.yaml` per project (paths, GitHub repos, branches, GBrain sources). Supersedes the retired `project-inventory.md`. |
-| `~/.config/opencode/skills/mb-docs-manager/SKILL.md` | Docs Manager skill — keeps `docmap.md`, [[projects-config-register]], and per-project README/AGENTS/INDEX files accurate against the real filesystem |
+| projects-config-register (in `C:\mybizz\mybizz-config-docs\`) | The **central config register** — one `{slug}-config.yaml` per project (paths, GitHub repos, branches, GBrain sources). Supersedes the retired `project-inventory.md`. |
+| `~/.config/opencode/skills/mb-docs-manager/SKILL.md` | Docs Manager skill — keeps `docmap.md`, projects-config-register, and per-project README/AGENTS/INDEX files accurate against the real filesystem |
 | `~/.config/opencode/skills/mb-align-docs/SKILL.md` | mb-align-docs skill — keeps document *content* (terminology, requirements, cross-references, identifiers) internally consistent within a project's documentation |
 
 ## How the two skills relate to this folder
 
-- **Docs Manager** reads and corrects [[docmap|Docmap]] and [[projects-config-register]] (the per-project `{slug}-config.yaml` register) directly — they are
+- **Docs Manager** reads and corrects [[[dev-root-hub:docmap|Docmap]]](C:/dev/dev-root/docmap.md) and projects-config-register (the per-project `{slug}-config.yaml` register) directly — they are
   part of its five tracked file types.
 - **mb-align-docs** does not touch either file — its scope is document content within a project's
   `project-library`, not top-level structure maps. The two skills do not interoperate.
