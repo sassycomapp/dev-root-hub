@@ -1,14 +1,14 @@
 ---
 title: "docmap"
 doc-id: "mb-738efe3e"
-updated: "2026-10-01"
+updated: "2026-10-02"
 ---
 # Mybizz Division — Docmap
 
 **Purpose:** Single canonical navigation map for the Mybizz division — where every folder lives, what it is for, and where new files should go. Agents read this to understand the territory.
 
 **Date:** 2026-07-23
-**Verified:** 2026-09-17
+**Verified:** 2026-10-02
 
 **Companion:** projects-config-register The use of registers has been discontinued. Please review (`C:\mybizz\mybizz-config-docs\`) — register of every project's `{slug}-config.yaml`. See Section 8.
 
@@ -21,25 +21,23 @@ C:\mybizz\
 ├── archive/                    ← Long-term reference store (out of scope; holds obsolete-moved records)
 ├── archify/                    ← archify source clone (scaffold exception)
 ├── anvil-agent-references/     ← Anvil skills source clone (scaffold exception)
-├── gbrain/                     ← GBrain source clone (scaffold exception)
 ├── gstack/                     ← GStack source clone (scaffold exception)
 ├── logs/                       ← System and tool logs (scaffold exception)
-│   ├── mb-docs-manager/        ← docs-manager run logs + Learnings
-│   ├── mb-align-docs/          ← align-docs run logs + Learnings
 │   ├── mb-wikilinks/           ← wikilinks run logs
 │   ├── mb-sysdoc-creator/      ← sysdoc-creator run logs + learnings
 │   ├── mb-submit-memory/       ← submit-memory logs
 │   ├── github-logs/            ← Commit/push reports + git-status snapshots
-│   └── gbrain-logs/            ← GBrain sync logs
+│   ├── gbrain-logs/            ← GBrain sync logs
+│   ├── cupcake/                ← (new — add a description)
+│   ├── mb-doc-maintainer/      ← (new — add a description)
+│   └── sessions-log/           ← (new — add a description)
 ├── matt-pocock-skills-source/  ← Matt Pocock skills source clone (scaffold exception)
 ├── memory-audit-reports/       ← Memory audit reports (IN SCOPE)
-├── Models/                     ← AI model selection working documents
 ├── mybizz-config-docs/         ← Canonical tool/component doc suites + projects-config-register.md (IN SCOPE)
-├── mybizz-config.yaml          ← The mybizz folder's own config — documents the scaffold-driven scope
 ├── mybizz-os-docs/             ← System describer/explainer documents (IN SCOPE)
-├── prompts/                    ← Standing prompt/process documents
 ├── scripts/                    ← Global utility scripts (scaffold exception)
-└── README.md                   ← Division workspace overview
+├── README.md                   ← Division workspace overview
+└── memory-diagnostic-reports/  ← (new — add a description)
 ```
 
 ### Division management data — `C:\data-mybizz-mgt\` (IN SCOPE, separate root)
@@ -50,12 +48,15 @@ repository. Separate from `C:\pdlf\` — the two must never be merged.
 
 ```
 C:\data-mybizz-mgt\
-├── desktop/                    ← Operating documents (daily-ops, master-task-list, deferred-and-unresolved-matters, dev-makepdlf-todo)
-├── WIP/                        ← Working files
-├── archive/                    ← Archived material
-├── temp/                       ← Temporary files
-├── register-local.md           ← Append-only document register
-└── README.md
+├── desktop/                ← Operating documents (daily-ops, master-task-list, deferred-and-unresolved-matters, dev-makepdlf-todo)
+├── WIP/                    ← Working files
+├── archive/                ← Archived material
+├── temp/                   ← Temporary files
+├── README.md
+├── assets/                 ← (new — add a description)
+├── Models/                 ← (new — add a description)
+├── obsolete/               ← (new — add a description)
+└── Tools and apps/         ← (new — add a description)
 ```
 
 Note: the folder was renamed from `C:\_data-mybizz-mgt` on 2026-09-14 (underscore dropped).
@@ -74,36 +75,47 @@ physically exists on disk, nothing more.
 
 ```
 C:\dev\
-├── dev-mb-3-cs\                ← PROJECT (mb-3-cs) — see mb-3-cs-config.yaml for status
-│   ├── mb-3-cs/                ← Code repo
-│   ├── mb-3-cs-project-library/        ← Docs repo
-│   └── wip/                    ← Project WIP (contains todo.md)
-├── dev-mb4ecom\                ← PROJECT (mb4ecom) — see mb4ecom-config.yaml for status
-│   ├── mb4ecom/                ← Code repo
-│   ├── mb4ecom-project-library/ ← Docs repo
-│   └── wip/                    ← Project WIP (contains todo.md)
-├── dev-mb5pdlf\                ← PROJECT (mb5pdlf) — see mb5pdlf-config.yaml for status
-│   ├── mb5pdlf/                ← Code repo
-│   ├── mb5pdlf-project-library/ ← Docs repo
-│   └── wip/                    ← Project WIP (contains todo.md)
-├── dev-makepdlf\               ← PROJECT (PDLF framework development) — see makepdlf-config.yaml
-│   ├── makepdlf-project-library/ ← Docs repo
-│   ├── makepdlf/               ← Code repo (empty shell, no remote yet)
-│   ├── wip/                    ← Project WIP (contains todo.md)
+├── dev-mb-3-cs\                               ← PROJECT (mb-3-cs) — see mb-3-cs-config.yaml for status
+│   ├── mb-3-cs/                               ← Code repo
+│   ├── mb-3-cs-project-library/               ← Docs repo
+│   ├── wip/                                   ← Project WIP (contains todo.md)
+│   └── README.md                              ← (new — add a description)
+├── dev-mb4ecom\                               ← PROJECT (mb4ecom) — see mb4ecom-config.yaml for status
+│   ├── mb4ecom/                               ← Code repo
+│   ├── mb4ecom-project-library/               ← Docs repo
+│   ├── wip/                                   ← Project WIP (contains todo.md)
+│   ├── mb4ecom-config.yaml                    ← (new — add a description)
+│   └── README.md                              ← (new — add a description)
+├── dev-mb5pdlf\                               ← PROJECT (mb5pdlf) — see mb5pdlf-config.yaml for status
+│   ├── mb5pdlf/                               ← Code repo
+│   ├── mb5pdlf-project-library/               ← Docs repo
+│   ├── wip/                                   ← Project WIP (contains todo.md)
+│   ├── mb5pdlf-config.yaml                    ← (new — add a description)
+│   └── README.md                              ← (new — add a description)
+├── dev-makepdlf\                              ← PROJECT (PDLF framework development) — see makepdlf-config.yaml
+│   ├── makepdlf-project-library/              ← Docs repo
+│   ├── makepdlf/                              ← Code repo (empty shell, no remote yet)
+│   ├── wip/                                   ← Project WIP (contains todo.md)
 │   └── (many subfolders — see dev-makepdlf/makepdlf-project-library/docs-local/docmap.md)
-├── dev-root\                    ← Division-level inventory and mapping docs
-│   └── docmap.md                ← Full division hierarchy map
-├── obsolete\                   ← Dev-level obsolete. Developer purges only.
-├── project-library-global\     ← Shared standards and reference for all projects
-│   ├── adr-global/             ← Global architectural decision records
-│   ├── checklists-global/      ← Global checklists
-│   ├── docs-standard-global/   ← Standard doc templates
-│   ├── guides-global/          ← Global how-to guides
-│   ├── policy-global/          ← Global policies
-│   ├── specifications-global/  ← Global specifications
-│   ├── standard-operating-procedures-global/ ← Global SOPs
-│   └── templates-global/       ← Global templates
-└── project-template\           ← Skeleton for new projects (import into new dev-* folder)
+├── dev-root\                                  ← Division-level inventory and mapping docs
+│   ├── docmap.md                              ← Full division hierarchy map
+│   └── README.md                              ← (new — add a description)
+├── obsolete\                                  ← Dev-level obsolete. Developer purges only.
+├── project-library-global\                    ← Shared standards and reference for all projects
+│   ├── adr-global/                            ← Global architectural decision records
+│   ├── docs-standard-global/                  ← Standard doc templates
+│   ├── guides-global/                         ← Global how-to guides
+│   ├── policy-global/                         ← Global policies
+│   ├── specifications-global/                 ← Global specifications
+│   ├── standard-operating-procedures-global/  ← Global SOPs
+│   ├── templates-global/                      ← Global templates
+│   ├── anvil-docs/                            ← (new — add a description)
+│   ├── obsolete/                              ← (new — add a description)
+│   ├── README.md                              ← (new — add a description)
+│   ├── rules-cupcake-global/                  ← (new — add a description)
+│   ├── security-global/                       ← (new — add a description)
+│   └── sessions/                              ← (new — add a description)
+└── project-template\                          ← Skeleton for new projects (import into new dev-* folder)
 ```
 
 ---
@@ -118,12 +130,12 @@ makePDLF environment (`C:\dev\dev-makepdlf\`) and migrates here when complete.
 
 ```
 C:\pdlf\
-├── pdlf-library/       ← Canonical technical documentation (ADRs, specs, policies, explainers, register)
-├── app-factory/        ← Machinery — one module per pipeline step (placeholders today, populated by makePDLF)
-├── output/             ← Producer-routed artifact safety net (transient)
-├── AGENTS.md           ← Standing rules for this location
-├── pdlf-config.yaml    ← Config file (registered in projects-config-register.md)
-└── README.md
+├── pdlf-library/           ← Canonical technical documentation (ADRs, specs, policies, explainers, register)
+├── app-factory/            ← Machinery — one module per pipeline step (placeholders today, populated by makePDLF)
+├── output/                 ← Producer-routed artifact safety net (transient)
+├── AGENTS.md               ← Standing rules for this location
+├── README.md
+└── obsolete/               ← (new — add a description)
 ```
 
 ---
