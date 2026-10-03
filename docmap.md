@@ -1,7 +1,7 @@
 ---
 title: "docmap"
 doc-id: "mb-738efe3e"
-updated: "2026-10-02"
+updated: "2026-10-03"
 ---
 # Mybizz Division — Docmap
 
@@ -10,7 +10,7 @@ updated: "2026-10-02"
 **Date:** 2026-07-23
 **Verified:** 2026-10-02
 
-**Companion:** projects-config-register The use of registers has been discontinued. Please review (`C:\mybizz\mybizz-config-docs\`) — register of every project's `{slug}-config.yaml`. See Section 8.
+**Kept current:** `build-docmap.py` rebuilds the folder trees (`python3 /mnt/c/mybizz/scripts/build-docmap.py --write`); see [[[mybizz-os-docs:operating-procedures/daily-ops|Daily Ops]]](C:/mybizz/mybizz-os-docs/operating-procedures/daily-ops.md).
 
 ---
 
@@ -23,17 +23,15 @@ C:\mybizz\
 ├── anvil-agent-references/     ← Anvil skills source clone (scaffold exception)
 ├── gstack/                     ← GStack source clone (scaffold exception)
 ├── logs/                       ← System and tool logs (scaffold exception)
-│   ├── mb-wikilinks/           ← wikilinks run logs
 │   ├── mb-sysdoc-creator/      ← sysdoc-creator run logs + learnings
 │   ├── mb-submit-memory/       ← submit-memory logs
 │   ├── github-logs/            ← Commit/push reports + git-status snapshots
 │   ├── gbrain-logs/            ← GBrain sync logs
 │   ├── cupcake/                ← (new — add a description)
-│   ├── mb-doc-maintainer/      ← (new — add a description)
 │   └── sessions-log/           ← (new — add a description)
 ├── matt-pocock-skills-source/  ← Matt Pocock skills source clone (scaffold exception)
 ├── memory-audit-reports/       ← Memory audit reports (IN SCOPE)
-├── mybizz-config-docs/         ← Canonical tool/component doc suites + projects-config-register.md (IN SCOPE)
+├── mybizz-config-docs/         ← Canonical tool/component doc suites (IN SCOPE)
 ├── mybizz-os-docs/             ← System describer/explainer documents (IN SCOPE)
 ├── scripts/                    ← Global utility scripts (scaffold exception)
 ├── README.md                   ← Division workspace overview
@@ -175,7 +173,7 @@ rule in Section 6 — that rule applies to system folders, not personal ones.
 | Completed work for long-term reference | `C:\mybizz\archive\` |
 | Temporary trash during a session | `C:\dev\obsolete\` (dev items) or `C:\mybizz\Mgt\obsolete\` (mgt items — folder created on first need) |
 | Custom skills (mb-* family) | `~/.config/opencode/skills/` (WSL) — browsable runtime surface |
-| Backups | Docs Manager: `C:\backup-mb-docs-manager\<timestamp>\`. mb-align-docs: `C:\backup-mb-align-docs\<timestamp>\`. mb-wikilinks: `C:\backup-mb-wikilinks\`. WSL-originated: `C:\backup-wsl\{script}\<timestamp>\`. General: `C:\backup-general\`. Backup folders are non-entities: not tracked, not registered, never scanned. |
+| Backups | WSL-originated: `C:\backup-wsl\{script}\<timestamp>\`. General: `C:\backup-general\`. Backup folders are non-entities: not tracked, not registered, never scanned. |
 | System and tool logs | `C:\mybizz\logs\{tool}\` (e.g., `C:\mybizz\logs\gbrain-logs\`, `C:\mybizz\logs\github-logs\`) |
 
 ### The config-YAML rule
@@ -227,23 +225,18 @@ Every active project has `C:\dev\dev-{project}\wip\todo.md`. The todo.md is proj
 | `docmap.md` | `C:\dev\dev-root\docmap.md` | THIS FILE — full division hierarchy map |
 | Per-project config | `C:\dev\dev-{project}\{slug}-config.yaml` | Single source of truth for that project's configuration — see Section 6 |
 | Per-project explainer | `C:\dev\dev-{project}\README.md` | Narrative context for that project |
-| | projects-config-register The use of registers has been discontinued. Please review | `C:\mybizz\mybizz-config-docs\projects-config-register.md` | Register of every project's `{slug}-config.yaml` — single source of truth |
 | `README.md` | `C:\mybizz\README.md` | Division workspace overview |
 | Global `AGENTS.md` | `~/.config/opencode/AGENTS.md` | Global agent behavior rules — authoritative, live |
 | Project `AGENTS.md`/`agents.md` | **Varies per project — see that project's `{slug}-config.yaml`.** No single fixed path pattern exists: some projects have it in the docs repo only, `mb-3-cs` has it in both repos (lowercase `agents.md` in the code repo specifically), some projects have none yet. Do not assume a pattern — check the YAML. |
 | `daily-ops.md` | `C:\data-mybizz-mgt\desktop\daily-ops.md` | Daily operations quick reference |
 | [[[data-mybizz-mgt:desktop/master-task-list\|Master Task List]]](C:/data-mybizz-mgt/desktop/master-task-list.md) | `C:\data-mybizz-mgt\desktop\master-task-list.md` | Current active task list |
-| [[[mybizz-os-docs:os-reference-docs/mybizz-scope-list\|Mybizz Scope List]]](C:/mybizz/mybizz-os-docs/os-reference-docs/mybizz-scope-list.md) | `C:\mybizz\mybizz-os-docs\os-reference-docs\mybizz-scope-list.md` | Scope scaffold — read at Phase 0 of every docs-manager run |
+| [[[mybizz-os-docs:os-reference-docs/mybizz-scope-list\|Mybizz Scope List]]](C:/mybizz/mybizz-os-docs/os-reference-docs/mybizz-scope-list.md) | `C:\mybizz\mybizz-os-docs\os-reference-docs\mybizz-scope-list.md` | Scope scaffold |
 | [[[mybizz-os-docs:os-reference-docs/repo-organization\|Repo Organization]]](C:/mybizz/mybizz-os-docs/os-reference-docs/repo-organization.md) | `C:\mybizz\mybizz-os-docs\os-reference-docs\repo-organization.md` | GBrain sources / GitHub repos / local paths correlation table |
 | dev-makepdlf docmap | `C:\dev\dev-makepdlf\makepdlf-project-library\docs-local\docmap.md` | PDLF project document map |
-| docs-manager skill | `~/.config/opencode/skills/mb-docs-manager/SKILL.md` | Skill definition — document inventory, update rules, workflow |
-| | Windows: `\\wsl.localhost\Ubuntu\home\dev-p\.config\opencode\skills\mb-docs-manager\SKILL.md` | |
-| docs-manager sub-agents (5 files) | `~/.config/opencode/skills/mb-docs-manager/docs-manager-backup.md`, `docs-manager-scan.md`, `docs-manager-apply.md`, `docs-manager-filesystem.md`, `docs-manager-commit.md` | One sub-agent per phase (0 backup, 1 scan, 4a text edits, 4b file-system operations, 6 commit/push), each with only the permissions its phase needs |
-| | Windows: `\\wsl.localhost\Ubuntu\home\dev-p\.config\opencode\skills\mb-docs-manager\` | |
 
-**Retired:** `scaffold-system.html` — archived to `C:\mybizz\archive\` as a historical record, no longer actively maintained. `session-opening-prompt.md` — confirmed empty, deleted; its purpose is tracked as [[[data-mybizz-mgt:desktop/master-task-list|Master Task List]]](C:/data-mybizz-mgt/desktop/master-task-list.md) Section 5 instead. `C:\dev\AGENTS-global-standard-reference.md` — its real content (hard rules, definitions, certainty levels, language restrictions, prescribed standards) has been fully merged into the live global `AGENTS.md`; the file itself is superseded. `C:\dev\dev-root\project-inventory.md` — deleted 2026-08-13; every real fact it held now lives in one of the 9 project `{slug}-config.yaml` files (see projects-config-register The use of registers has been discontinued. Please review), or was confirmed genuinely obsolete. `C:\mybizz\config\workspace-docmap.md` — deleted 2026-08-13, substantially stale (dated 2026-07-08); its two genuinely useful, not-yet-captured details (GStack's per-project subdirectory structure, standard per-project artifact directories) were preserved in [[[mybizz-config-docs:gstack/gstack-reference]]](C:/mybizz/mybizz-config-docs/gstack/gstack-reference.md) before removal.
+**Retired:** `scaffold-system.html` — archived to `C:\mybizz\archive\` as a historical record, no longer actively maintained. `session-opening-prompt.md` — confirmed empty, deleted; its purpose is tracked as [[[data-mybizz-mgt:desktop/master-task-list|Master Task List]]](C:/data-mybizz-mgt/desktop/master-task-list.md) Section 5 instead. `C:\dev\AGENTS-global-standard-reference.md` — its real content (hard rules, definitions, certainty levels, language restrictions, prescribed standards) has been fully merged into the live global `AGENTS.md`; the file itself is superseded. `C:\dev\dev-root\project-inventory.md` — deleted 2026-08-13; every real fact it held now lives in one of the 9 project `{slug}-config.yaml` files, or was confirmed genuinely obsolete. `C:\mybizz\config\workspace-docmap.md` — deleted 2026-08-13, substantially stale (dated 2026-07-08); its two genuinely useful, not-yet-captured details (GStack's per-project subdirectory structure, standard per-project artifact directories) were preserved in [[[mybizz-config-docs:gstack/gstack-reference]]](C:/mybizz/mybizz-config-docs/gstack/gstack-reference.md) before removal.
 
-## Old-material pointers (added 2026-09-20, developer instruction, mb-wikilinks run 20260920T100155)
+## Old-material pointers (added 2026-09-20, developer instruction)
 
 Material referenced by this document but not present in the current corpus, with developer-provided locations:
 - AGENTS-global-standard-reference.md — superseded (content merged into the live global AGENTS.md); backup snapshot: /mnt/c/backup-daily/2026-09-16/dev/AGENTS-global-standard-reference.md

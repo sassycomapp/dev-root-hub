@@ -1,16 +1,14 @@
 ---
 title: "README"
 doc-id: "mb-386ec6b4"
-updated: "2026-10-01"
+updated: "2026-10-03"
 ---
 # dev-root — README
 
 **This file covers `C:\dev\dev-root\` only** — the two division-map documents that give a
-top-level view across all projects under `C:\dev\`. It does not cover Docs Manager or
-mb-align-docs themselves; those are documented in the OpenCode skills directory
-(`~/.config/opencode/skills/mb-docs-manager/SKILL.md`, `~/.config/opencode/skills/mb-align-docs/SKILL.md`).
+top-level view across all projects under `C:\dev\`.
 
-> Note: this file was reconstructed after the original was overwritten during Docs Manager's setup.
+> Note: this file was reconstructed after the original was overwritten during setup.
 > Verified/corrected 2026-07-27 against current state of docmap.md and project-inventory.md.
 
 ---
@@ -19,23 +17,13 @@ mb-align-docs themselves; those are documented in the OpenCode skills directory
 
 | File | What it is |
 |---|---|
-| `docmap.md` | The **full Mybizz division hierarchy map** — covers `C:\dev\`, `C:\mybizz\`, `C:\pdlf\`, `C:\data-mybizz-mgt\` plus file placement rules |
-| projects-config-register The use of registers has been discontinued. Please review (in `C:\mybizz\mybizz-config-docs\`) | The **central config register** — one `{slug}-config.yaml` per project (paths, GitHub repos, branches, GBrain sources). Supersedes the retired `project-inventory.md`. |
-| `~/.config/opencode/skills/mb-docs-manager/SKILL.md` | Docs Manager skill — keeps `docmap.md`, projects-config-register The use of registers has been discontinued. Please review, and per-project README/AGENTS/INDEX files accurate against the real filesystem |
-| `~/.config/opencode/skills/mb-align-docs/SKILL.md` | mb-align-docs skill — keeps document *content* (terminology, requirements, cross-references, identifiers) internally consistent within a project's documentation |
-
-## How the two skills relate to this folder
-
-- **Docs Manager** reads and corrects [[[dev-root-hub:docmap|Docmap]]](C:/dev/dev-root/docmap.md) and projects-config-register The use of registers has been discontinued. Please review (the per-project `{slug}-config.yaml` register) directly — they are
-  part of its five tracked file types.
-- **mb-align-docs** does not touch either file — its scope is document content within a project's
-  `project-library`, not top-level structure maps. The two skills do not interoperate.
+| `docmap.md` | The **full Mybizz division hierarchy map** — covers `C:\dev\`, `C:\mybizz\`, `C:\pdlf\`, `C:\data-mybizz-mgt\` plus file placement rules. Its folder trees are rebuilt by `build-docmap.py` (see [[[mybizz-os-docs:operating-procedures/daily-ops\|Daily Ops]]](C:/mybizz/mybizz-os-docs/operating-procedures/daily-ops.md)). |
 
 ## If something looks wrong here
 
-- For a structural/index problem (a project missing from the config register The use of registers has been discontinued. Please review, `docmap.md` out
-  of date) → run Docs Manager.
-- For a content/reference problem inside a specific project's documentation → run mb-align-docs
-  against that project.
+- For a structural/index problem (`docmap.md` folder trees out of date) → run `build-docmap.py --write`
+  (see [[[mybizz-os-docs:operating-procedures/daily-ops|Daily Ops]]](C:/mybizz/mybizz-os-docs/operating-procedures/daily-ops.md)); it rebuilds the trees and keeps existing descriptions.
+- For a content/reference problem inside a specific project's documentation → /mb-project-docs
+  during that project's close-out ([[[mybizz-os-docs:operating-procedures/close-out-process]]](C:/mybizz/mybizz-os-docs/operating-procedures/close-out-process.md)).
 - For anything about this file itself → this was reconstructed and may be incomplete; correct it
   directly rather than treating it as authoritative history.
