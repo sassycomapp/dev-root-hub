@@ -1,14 +1,14 @@
 ---
 title: "docmap"
 doc-id: "mb-738efe3e"
-updated: "2026-10-03"
+updated: "2026-10-07"
 ---
 # Mybizz Division — Docmap
 
 **Purpose:** Single canonical navigation map for the Mybizz division — where every folder lives, what it is for, and where new files should go. Agents read this to understand the territory.
 
 **Date:** 2026-07-23
-**Verified:** 2026-10-02
+**Verified:** 2026-10-07
 
 **Kept current:** `build-docmap.py` rebuilds the folder trees (`python3 /mnt/c/mybizz/scripts/build-docmap.py --write`); see [[[mybizz-os-docs:operating-procedures/daily-ops|Daily Ops]]](C:/mybizz/mybizz-os-docs/operating-procedures/daily-ops.md).
 
@@ -18,24 +18,32 @@ updated: "2026-10-03"
 
 ```
 C:\mybizz\
-├── archive/                    ← Long-term reference store (out of scope; holds obsolete-moved records)
-├── archify/                    ← archify source clone (scaffold exception)
-├── anvil-agent-references/     ← Anvil skills source clone (scaffold exception)
-├── gstack/                     ← GStack source clone (scaffold exception)
-├── logs/                       ← System and tool logs (scaffold exception)
-│   ├── mb-sysdoc-creator/      ← sysdoc-creator run logs + learnings
-│   ├── mb-submit-memory/       ← submit-memory logs
-│   ├── github-logs/            ← Commit/push reports + git-status snapshots
-│   ├── gbrain-logs/            ← GBrain sync logs
-│   ├── cupcake/                ← (new — add a description)
-│   └── sessions-log/           ← (new — add a description)
-├── matt-pocock-skills-source/  ← Matt Pocock skills source clone (scaffold exception)
-├── memory-audit-reports/       ← Memory audit reports (IN SCOPE)
-├── mybizz-config-docs/         ← Canonical tool/component doc suites (IN SCOPE)
-├── mybizz-os-docs/             ← System describer/explainer documents (IN SCOPE)
-├── scripts/                    ← Global utility scripts (scaffold exception)
-├── README.md                   ← Division workspace overview
-└── memory-diagnostic-reports/  ← (new — add a description)
+├── archive/                      ← Long-term reference store (out of scope; holds obsolete-moved records)
+├── archify/                      ← archify source clone (scaffold exception)
+├── anvil-agent-references/       ← Anvil skills source clone (scaffold exception)
+├── gstack/                       ← GStack source clone (scaffold exception)
+├── logs/                         ← System and tool logs (scaffold exception)
+│   ├── mb-sysdoc-creator/        ← sysdoc-creator run logs + learnings
+│   ├── mb-submit-memory/         ← submit-memory logs
+│   ├── github-logs/              ← Commit/push reports + git-status snapshots
+│   ├── gbrain-logs/              ← GBrain sync logs
+│   ├── cupcake/                  ← (new — add a description)
+│   └── sunday-backup/            ← (new — add a description)
+├── matt-pocock-skills-source/    ← Matt Pocock skills source clone (scaffold exception)
+├── memory-audit-reports/         ← Memory audit reports (IN SCOPE)
+├── mybizz-config-docs/           ← Canonical tool/component doc suites (IN SCOPE)
+├── mybizz-os-docs/               ← System describer/explainer documents (IN SCOPE)
+├── scripts/                      ← Global utility scripts (scaffold exception)
+├── README.md                     ← Division workspace overview
+├── mb-archify-scope/             ← (new — add a description)
+├── mb-close-out/                 ← (new — add a description)
+├── mb-compile-rules/             ← (new — add a description)
+├── mb-memory-system-diagnostic/  ← (new — add a description)
+├── mb-project-docs/              ← (new — add a description)
+├── mb-sentinel-review/           ← (new — add a description)
+├── mb-submit-memory/             ← (new — add a description)
+├── mb-sysdoc-creator/            ← (new — add a description)
+└── minimax-skills/               ← (new — add a description)
 ```
 
 ### Division management data — `C:\data-mybizz-mgt\` (IN SCOPE, separate root)
@@ -73,47 +81,49 @@ physically exists on disk, nothing more.
 
 ```
 C:\dev\
-├── dev-mb-3-cs\                               ← PROJECT (mb-3-cs) — see mb-3-cs-config.yaml for status
-│   ├── mb-3-cs/                               ← Code repo
-│   ├── mb-3-cs-project-library/               ← Docs repo
-│   ├── wip/                                   ← Project WIP (contains todo.md)
-│   └── README.md                              ← (new — add a description)
-├── dev-mb4ecom\                               ← PROJECT (mb4ecom) — see mb4ecom-config.yaml for status
-│   ├── mb4ecom/                               ← Code repo
-│   ├── mb4ecom-project-library/               ← Docs repo
-│   ├── wip/                                   ← Project WIP (contains todo.md)
-│   ├── mb4ecom-config.yaml                    ← (new — add a description)
-│   └── README.md                              ← (new — add a description)
-├── dev-mb5pdlf\                               ← PROJECT (mb5pdlf) — see mb5pdlf-config.yaml for status
-│   ├── mb5pdlf/                               ← Code repo
-│   ├── mb5pdlf-project-library/               ← Docs repo
-│   ├── wip/                                   ← Project WIP (contains todo.md)
-│   ├── mb5pdlf-config.yaml                    ← (new — add a description)
-│   └── README.md                              ← (new — add a description)
-├── dev-makepdlf\                              ← PROJECT (PDLF framework development) — see makepdlf-config.yaml
-│   ├── makepdlf-project-library/              ← Docs repo
-│   ├── makepdlf/                              ← Code repo (empty shell, no remote yet)
-│   ├── wip/                                   ← Project WIP (contains todo.md)
+├── dev-mb-3-cs\                                ← PROJECT (mb-3-cs) — see mb-3-cs-config.yaml for status
+│   ├── mb-3-cs/                                ← Code repo
+│   ├── mb-3-cs-project-library/                ← Docs repo
+│   ├── wip/                                    ← Project WIP (contains todo.md)
+│   └── README.md                               ← (new — add a description)
+├── dev-mb4ecom\                                ← PROJECT (mb4ecom) — see mb4ecom-config.yaml for status
+│   ├── mb4ecom/                                ← Code repo
+│   ├── mb4ecom-project-library/                ← Docs repo
+│   ├── wip/                                    ← Project WIP (contains todo.md)
+│   ├── mb4ecom-config.yaml                     ← (new — add a description)
+│   └── README.md                               ← (new — add a description)
+├── dev-mb5pdlf\                                ← PROJECT (mb5pdlf) — see mb5pdlf-config.yaml for status
+│   ├── mb5pdlf/                                ← Code repo
+│   ├── mb5pdlf-project-library/                ← Docs repo
+│   ├── wip/                                    ← Project WIP (contains todo.md)
+│   ├── mb5pdlf-config.yaml                     ← (new — add a description)
+│   └── README.md                               ← (new — add a description)
+├── dev-makepdlf\                               ← PROJECT (PDLF framework development) — see makepdlf-config.yaml
+│   ├── makepdlf-project-library/               ← Docs repo
+│   ├── makepdlf/                               ← Code repo (empty shell, no remote yet)
+│   ├── wip/                                    ← Project WIP (contains todo.md)
 │   └── (many subfolders — see dev-makepdlf/makepdlf-project-library/docs-local/docmap.md)
-├── dev-root\                                  ← Division-level inventory and mapping docs
-│   ├── docmap.md                              ← Full division hierarchy map
-│   └── README.md                              ← (new — add a description)
-├── obsolete\                                  ← Dev-level obsolete. Developer purges only.
-├── project-library-global\                    ← Shared standards and reference for all projects
-│   ├── adr-global/                            ← Global architectural decision records
-│   ├── docs-standard-global/                  ← Standard doc templates
-│   ├── guides-global/                         ← Global how-to guides
-│   ├── policy-global/                         ← Global policies
-│   ├── specifications-global/                 ← Global specifications
-│   ├── standard-operating-procedures-global/  ← Global SOPs
-│   ├── templates-global/                      ← Global templates
-│   ├── anvil-docs/                            ← (new — add a description)
-│   ├── obsolete/                              ← (new — add a description)
-│   ├── README.md                              ← (new — add a description)
-│   ├── rules-cupcake-global/                  ← (new — add a description)
-│   ├── security-global/                       ← (new — add a description)
-│   └── sessions/                              ← (new — add a description)
-└── project-template\                          ← Skeleton for new projects (import into new dev-* folder)
+├── dev-root\                                   ← Division-level inventory and mapping docs
+│   ├── docmap.md                               ← Full division hierarchy map
+│   └── README.md                               ← (new — add a description)
+├── obsolete\                                   ← Dev-level obsolete. Developer purges only.
+├── project-library-global\                     ← Shared standards and reference for all projects
+│   ├── adr-global/                             ← Global architectural decision records
+│   ├── docs-standard-global/                   ← Standard doc templates
+│   ├── guides-global/                          ← Global how-to guides
+│   ├── policy-global/                          ← Global policies
+│   ├── specifications-global/                  ← Global specifications
+│   ├── standard-operating-procedures-global/   ← Global SOPs
+│   ├── templates-global/                       ← Global templates
+│   ├── anvil-docs/                             ← (new — add a description)
+│   ├── obsolete/                               ← (new — add a description)
+│   ├── README.md                               ← (new — add a description)
+│   ├── rules-cupcake-global/                   ← (new — add a description)
+│   ├── security-global/                        ← (new — add a description)
+│   ├── sessions/                               ← (new — add a description)
+│   ├── project-library-global-scaffold.xlsx    ← (new — add a description)
+│   └── ~$project-library-global-scaffold.xlsx  ← (new — add a description)
+└── project-template\                           ← Skeleton for new projects (import into new dev-* folder)
 ```
 
 ---
