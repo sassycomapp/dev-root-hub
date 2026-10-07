@@ -1,7 +1,7 @@
 ---
 title: "README"
 doc-id: "mb-386ec6b4"
-updated: "2026-10-03"
+updated: "2026-10-07"
 ---
 # dev-root — README
 
@@ -24,6 +24,6 @@ top-level view across all projects under `C:\dev\`.
 - For a structural/index problem (`docmap.md` folder trees out of date) → run `build-docmap.py --write`
   (see [[[mybizz-os-docs:operating-procedures/daily-ops|Daily Ops]]](C:/mybizz/mybizz-os-docs/operating-procedures/daily-ops.md)); it rebuilds the trees and keeps existing descriptions.
 - For a content/reference problem inside a specific project's documentation → /mb-project-docs
-  during that project's close-out ([[[mybizz-os-docs:operating-procedures/close-out-process]]](C:/mybizz/mybizz-os-docs/operating-procedures/close-out-process.md)).
+  during that project's close-out (close-out-process).
 - For anything about this file itself → this was reconstructed and may be incomplete; correct it
   directly rather than treating it as authoritative history.
