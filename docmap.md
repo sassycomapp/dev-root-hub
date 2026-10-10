@@ -1,14 +1,14 @@
 ---
 title: "docmap"
 doc-id: "mb-738efe3e"
-updated: "2026-10-07"
+updated: "2026-10-10"
 ---
 # Mybizz Division — Docmap
 
 **Purpose:** Single canonical navigation map for the Mybizz division — where every folder lives, what it is for, and where new files should go. Agents read this to understand the territory.
 
 **Date:** 2026-07-23
-**Verified:** 2026-10-07
+**Verified:** 2026-10-10
 
 **Kept current:** `build-docmap.py` rebuilds the folder trees (`python3 /mnt/c/mybizz/scripts/build-docmap.py --write`); see [[[mybizz-os-docs:operating-procedures/daily-ops|Daily Ops]]](C:/mybizz/mybizz-os-docs/operating-procedures/daily-ops.md).
 
@@ -81,49 +81,43 @@ physically exists on disk, nothing more.
 
 ```
 C:\dev\
-├── dev-mb-3-cs\                                ← PROJECT (mb-3-cs) — see mb-3-cs-config.yaml for status
-│   ├── mb-3-cs/                                ← Code repo
-│   ├── mb-3-cs-project-library/                ← Docs repo
-│   ├── wip/                                    ← Project WIP (contains todo.md)
-│   └── README.md                               ← (new — add a description)
-├── dev-mb4ecom\                                ← PROJECT (mb4ecom) — see mb4ecom-config.yaml for status
-│   ├── mb4ecom/                                ← Code repo
-│   ├── mb4ecom-project-library/                ← Docs repo
-│   ├── wip/                                    ← Project WIP (contains todo.md)
-│   ├── mb4ecom-config.yaml                     ← (new — add a description)
-│   └── README.md                               ← (new — add a description)
-├── dev-mb5pdlf\                                ← PROJECT (mb5pdlf) — see mb5pdlf-config.yaml for status
-│   ├── mb5pdlf/                                ← Code repo
-│   ├── mb5pdlf-project-library/                ← Docs repo
-│   ├── wip/                                    ← Project WIP (contains todo.md)
-│   ├── mb5pdlf-config.yaml                     ← (new — add a description)
-│   └── README.md                               ← (new — add a description)
-├── dev-makepdlf\                               ← PROJECT (PDLF framework development) — see makepdlf-config.yaml
-│   ├── makepdlf-project-library/               ← Docs repo
-│   ├── makepdlf/                               ← Code repo (empty shell, no remote yet)
-│   ├── wip/                                    ← Project WIP (contains todo.md)
-│   └── (many subfolders — see dev-makepdlf/makepdlf-project-library/docs-local/docmap.md)
-├── dev-root\                                   ← Division-level inventory and mapping docs
-│   ├── docmap.md                               ← Full division hierarchy map
-│   └── README.md                               ← (new — add a description)
-├── obsolete\                                   ← Dev-level obsolete. Developer purges only.
-├── project-library-global\                     ← Shared standards and reference for all projects
-│   ├── adr-global/                             ← Global architectural decision records
-│   ├── docs-standard-global/                   ← Standard doc templates
-│   ├── guides-global/                          ← Global how-to guides
-│   ├── policy-global/                          ← Global policies
-│   ├── specifications-global/                  ← Global specifications
-│   ├── standard-operating-procedures-global/   ← Global SOPs
-│   ├── templates-global/                       ← Global templates
-│   ├── anvil-docs/                             ← (new — add a description)
-│   ├── obsolete/                               ← (new — add a description)
-│   ├── README.md                               ← (new — add a description)
-│   ├── rules-cupcake-global/                   ← (new — add a description)
-│   ├── security-global/                        ← (new — add a description)
-│   ├── sessions/                               ← (new — add a description)
-│   ├── project-library-global-scaffold.xlsx    ← (new — add a description)
-│   └── ~$project-library-global-scaffold.xlsx  ← (new — add a description)
-└── project-template\                           ← Skeleton for new projects (import into new dev-* folder)
+├── dev-mb-3-cs\                               ← PROJECT (mb-3-cs) — see mb-3-cs-config.yaml for status
+│   ├── mb-3-cs/                               ← Code repo
+│   ├── mb-3-cs-project-library/               ← Docs repo
+│   ├── wip/                                   ← Project WIP (contains todo.md)
+│   └── README.md                              ← (new — add a description)
+├── dev-mb4ecom\                               ← PROJECT (mb4ecom) — see mb4ecom-config.yaml for status
+│   ├── mb4ecom/                               ← Code repo
+│   ├── mb4ecom-project-library/               ← Docs repo
+│   ├── wip/                                   ← Project WIP (contains todo.md)
+│   ├── mb4ecom-config.yaml                    ← (new — add a description)
+│   └── README.md                              ← (new — add a description)
+├── dev-mb5pdlf\                               ← PROJECT (mb5pdlf) — see mb5pdlf-config.yaml for status
+│   ├── mb5pdlf/                               ← Code repo
+│   ├── mb5pdlf-project-library/               ← Docs repo
+│   ├── wip/                                   ← Project WIP (contains todo.md)
+│   ├── mb5pdlf-config.yaml                    ← (new — add a description)
+│   └── README.md                              ← (new — add a description)
+├── dev-root\                                  ← Division-level inventory and mapping docs
+│   ├── docmap.md                              ← Full division hierarchy map
+│   └── README.md                              ← (new — add a description)
+├── obsolete\                                  ← Dev-level obsolete. Developer purges only.
+├── project-library-global\                    ← Shared standards and reference for all projects
+│   ├── adr-global/                            ← Global architectural decision records
+│   ├── docs-standard-global/                  ← Standard doc templates
+│   ├── guides-global/                         ← Global how-to guides
+│   ├── policy-global/                         ← Global policies
+│   ├── specifications-global/                 ← Global specifications
+│   ├── standard-operating-procedures-global/  ← Global SOPs
+│   ├── templates-global/                      ← Global templates
+│   ├── anvil-docs/                            ← (new — add a description)
+│   ├── obsolete/                              ← (new — add a description)
+│   ├── README.md                              ← (new — add a description)
+│   ├── rules-cupcake-global/                  ← (new — add a description)
+│   ├── security-global/                       ← (new — add a description)
+│   ├── sessions/                              ← (new — add a description)
+│   └── project-library-global-scaffold.xlsx   ← (new — add a description)
+└── project-template\                          ← Skeleton for new projects (import into new dev-* folder)
 ```
 
 ---
@@ -143,7 +137,9 @@ C:\pdlf\
 ├── output/                 ← Producer-routed artifact safety net (transient)
 ├── AGENTS.md               ← Standing rules for this location
 ├── README.md
-└── obsolete/               ← (new — add a description)
+├── obsolete/               ← (new — add a description)
+├── desktop/                ← (new — add a description)
+└── stepwise/               ← (new — add a description)
 ```
 
 ---
