@@ -54,7 +54,7 @@ repository. Separate from `C:\pdlf\` — the two must never be merged.
 
 ```
 C:\data-mybizz-mgt\
-├── desktop/                ← Operating documents (daily-ops, master-task-list, deferred-and-unresolved-matters, dev-makepdlf-todo)
+├── desktop/                ← Operating documents (daily-ops, master-task-list, deferred-and-unresolved-matters)
 ├── WIP/                    ← Working files
 ├── archive/                ← Archived material
 ├── temp/                   ← Temporary files
@@ -127,13 +127,12 @@ C:\dev\
 **Current status: in active development.** The home of the PDLF system — the Project
 Development Lifecycle Framework — scaffolded live 2026-09-11 (library, app-factory
 machinery, output area, GitHub repo re-established). It is a separate repository from
-`C:\data-mybizz-mgt\`; do not merge the two. The system's machinery is built in the
-makePDLF environment (`C:\dev\dev-makepdlf\`) and migrates here when complete.
+`C:\data-mybizz-mgt\`; do not merge the two. All PDLF work happens here.
 
 ```
 C:\pdlf\
 ├── pdlf-library/           ← Canonical technical documentation (ADRs, specs, policies, explainers, register)
-├── app-factory/            ← Machinery — one module per pipeline step (placeholders today, populated by makePDLF)
+├── app-factory/            ← Machinery — one module per pipeline step (placeholders today, populated step by step)
 ├── output/                 ← Producer-routed artifact safety net (transient)
 ├── AGENTS.md               ← Standing rules for this location
 ├── README.md
@@ -238,7 +237,6 @@ Every active project has `C:\dev\dev-{project}\wip\todo.md`. The todo.md is proj
 | [[[data-mybizz-mgt:desktop/master-task-list\|Master Task List]]](C:/data-mybizz-mgt/desktop/master-task-list.md) | `C:\data-mybizz-mgt\desktop\master-task-list.md` | Current active task list |
 | [[[mybizz-os-docs:os-reference-docs/mybizz-scope-list\|Mybizz Scope List]]](C:/mybizz/mybizz-os-docs/os-reference-docs/mybizz-scope-list.md) | `C:\mybizz\mybizz-os-docs\os-reference-docs\mybizz-scope-list.md` | Scope scaffold |
 | [[[mybizz-os-docs:os-reference-docs/repo-organization\|Repo Organization]]](C:/mybizz/mybizz-os-docs/os-reference-docs/repo-organization.md) | `C:\mybizz\mybizz-os-docs\os-reference-docs\repo-organization.md` | GBrain sources / GitHub repos / local paths correlation table |
-| dev-makepdlf docmap | `C:\dev\dev-makepdlf\makepdlf-project-library\docs-local\docmap.md` | PDLF project document map |
 
 **Retired:** `scaffold-system.html` — archived to `C:\mybizz\archive\` as a historical record, no longer actively maintained. `session-opening-prompt.md` — confirmed empty, deleted; its purpose is tracked as [[[data-mybizz-mgt:desktop/master-task-list|Master Task List]]](C:/data-mybizz-mgt/desktop/master-task-list.md) Section 5 instead. `C:\dev\AGENTS-global-standard-reference.md` — its real content (hard rules, definitions, certainty levels, language restrictions, prescribed standards) has been fully merged into the live global `AGENTS.md`; the file itself is superseded. `C:\dev\dev-root\project-inventory.md` — deleted 2026-08-13; every real fact it held now lives in one of the 9 project `{slug}-config.yaml` files, or was confirmed genuinely obsolete. `C:\mybizz\config\workspace-docmap.md` — deleted 2026-08-13, substantially stale (dated 2026-07-08); its two genuinely useful, not-yet-captured details (GStack's per-project subdirectory structure, standard per-project artifact directories) were preserved in [[[mybizz-config-docs:gstack/gstack-reference]]](C:/mybizz/mybizz-config-docs/gstack/gstack-reference.md) before removal.
 
