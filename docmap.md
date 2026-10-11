@@ -1,14 +1,14 @@
 ---
 title: "docmap"
 doc-id: "mb-738efe3e"
-updated: "2026-10-10"
+updated: "2026-10-11"
 ---
 # Mybizz Division — Docmap
 
 **Purpose:** Single canonical navigation map for the Mybizz division — where every folder lives, what it is for, and where new files should go. Agents read this to understand the territory.
 
 **Date:** 2026-07-23
-**Verified:** 2026-10-10
+**Verified:** 2026-10-11
 
 **Kept current:** `build-docmap.py` rebuilds the folder trees (`python3 /mnt/c/mybizz/scripts/build-docmap.py --write`); see [[[mybizz-os-docs:operating-procedures/daily-ops|Daily Ops]]](C:/mybizz/mybizz-os-docs/operating-procedures/daily-ops.md).
 
