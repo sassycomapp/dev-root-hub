@@ -28,7 +28,6 @@ C:\mybizz\
 │   ├── gbrain-logs/              ← GBrain sync logs
 │   ├── github-logs/              ← Commit and push reports, git-status snapshots
 │   ├── mb-submit-memory/         ← mb-submit-memory logs
-│   ├── mb-sysdoc-creator/        ← mb-sysdoc-creator run logs and learnings
 │   └── sunday-backup/            ← SundayBackup logs
 ├── matt-pocock-skills-source/    ← Matt Pocock skills source clone (read-only)
 ├── mb-archify-scope/             ← Skill source: mb-archify-scope
@@ -44,7 +43,8 @@ C:\mybizz\
 ├── mybizz-config-docs/           ← One document suite per component
 ├── mybizz-os-docs/               ← Operating procedures and system-wide reference
 ├── scripts/                      ← MyBizz scripts (mybizz-scripts repository)
-└── README.md                     ← Division workspace overview
+├── README.md                     ← Division workspace overview
+└── memory-audit-reports/         ← Memory audit reports
 ```
 
 ---
@@ -79,18 +79,20 @@ C:\dev\
 │   ├── mb-3-cs-app3/                          ← App 3 code repository
 │   ├── mb-3-cs-app5/                          ← App 5 code repository
 │   ├── mb-3-cs-project-library/               ← Project library
-│   └── wip/                                   ← Project working files
+│   ├── wip/                                   ← Project working files
+│   └── README.md                              ← What this project folder is
 ├── dev-mb-4-ecom\                             ← Business mb-4-ecom
 │   ├── mb-4-ecom-app1/                        ← App 1 code repository
 │   ├── mb-4-ecom-app2/                        ← App 2 code repository (a release of App 1)
 │   ├── mb-4-ecom-app3/                        ← App 3 code repository
 │   ├── mb-4-ecom-app5/                        ← App 5 code repository
 │   ├── mb-4-ecom-project-library/             ← Project library
-│   └── wip/                                   ← Project working files
+│   ├── wip/                                   ← Project working files
+│   ├── mb4ecom-config.yaml                    ← Project configuration file
+│   └── README.md                              ← What this project folder is
 ├── dev-root\                                  ← Hub of the development folder
 │   ├── docmap.md                              ← This map
 │   └── README.md                              ← What this folder is
-├── obsolete\                                  ← Development trash; the developer purges it
 ├── project-library-global\                    ← Universal context library for every Anvil app
 │   ├── adr-global/                            ← Architectural decision records
 │   ├── anvil-docs/                            ← Anvil documentation compiled for agents
@@ -116,7 +118,6 @@ The app factory: the Project Development Lifecycle Framework that takes an appli
 ```
 C:\pdlf\
 ├── app-factory/            ← One set of step documents per pipeline step
-├── output/                 ← Artifact safety net (transient)
 ├── pdlf-library/           ← PDLF's own ADRs, specifications, policies, templates and explainers
 ├── AGENTS.md               ← Standing rules for this location
 └── README.md               ← What PDLF is
