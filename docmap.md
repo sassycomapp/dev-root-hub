@@ -1,13 +1,13 @@
 ---
 title: "docmap"
 doc-id: "mb-738efe3e"
-updated: "2026-10-23"
+updated: "2026-10-29"
 ---
 # Mybizz Division — Docmap
 
 **Purpose:** the navigation map of the Mybizz division: where every folder lives, what it is for, and where new files go. Agents read this to understand the territory.
 
-**Verified:** 2026-10-23
+**Verified:** 2026-10-29
 
 **Kept current:** `build-docmap.py` rebuilds the folder trees from the real folders (`python3 /mnt/c/mybizz/scripts/build-docmap.py --write`); see [[[mybizz-os-docs:operating-procedures/daily-ops|Daily Ops]]](C:/mybizz/mybizz-os-docs/operating-procedures/daily-ops.md). Repositories, their GitHub names and GBrain sources are listed in [[[mybizz-os-docs:os-reference-docs/repo-organization|Repo Organization]]](C:/mybizz/mybizz-os-docs/os-reference-docs/repo-organization.md); this map does not repeat them.
 
@@ -62,7 +62,8 @@ C:\data-mybizz-mgt\
 ├── temp/                   ← Temporary files
 ├── Tools and apps/         ← Notes on tools and apps
 ├── WIP/                    ← Working files
-└── README.md               ← What this folder is
+├── README.md               ← What this folder is
+└── creative/               ← Creative work: images, video and design material
 ```
 
 ---
@@ -80,14 +81,14 @@ C:\dev\
 │   ├── mb-3-cs-app5/                          ← App 5 code repository
 │   ├── mb-3-cs-project-library/               ← Project library
 │   ├── wip/                                   ← Project working files
-│   └── README.md                              ← What this project folder is
+│   ├── README.md                              ← What this project folder is
+│   └── mb-3-cs-project-context/               ← Context of mb-3-cs, read-only
 ├── dev-mb-4-ecom\                             ← Business mb-4-ecom
 │   ├── mb-4-ecom-app1/                        ← App 1 code repository
 │   ├── mb-4-ecom-app2/                        ← App 2 code repository (a release of App 1)
 │   ├── mb-4-ecom-app3/                        ← App 3 code repository
 │   ├── mb-4-ecom-app5/                        ← App 5 code repository
 │   ├── mb-4-ecom-project-library/             ← Project library
-│   ├── wip/                                   ← Project working files
 │   ├── mb4ecom-config.yaml                    ← Project configuration file
 │   └── README.md                              ← What this project folder is
 ├── dev-root\                                  ← Hub of the development folder
